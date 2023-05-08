@@ -3,6 +3,7 @@
 import styles from "./nav.module.css";
 import { usePathname } from "next/navigation";
 import Link from "next/link";
+import Image from "next/image";
 
 const navLinks = [{ href: "/about", name: "Who We Are" }];
 
@@ -12,7 +13,14 @@ export default function Nav() {
   return (
     <nav className={styles.nav}>
       <h1>
-        <Link href="/">HHH</Link>
+        <Link href="/">
+          <Image
+            src="/HHH-Logo.jpg"
+            alt="HHH-Logo"
+            width={50}
+            height={50}
+          ></Image>
+        </Link>
       </h1>
       {navLinks.map((link) => {
         const isActive = pathname.startsWith(link.href);
