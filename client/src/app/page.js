@@ -4,12 +4,12 @@ import styles from "./page.module.css";
 export default function Home() {
   return (
     <main className={styles.main}>
-      {/* <div className={styles.description}>
+      <div className={styles.description}>
         <p>
-          Get started by editing&nbsp;
-          <code className={styles.code}>src/app/page.js</code>
+          "A Father of the fatherless and a Judge of the widow is God in His
+          holy habitation." -Psalm 68:5
         </p>
-        <div>
+        {/* <div>
           <a
             href="https://vercel.com?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
             target="_blank"
@@ -25,33 +25,16 @@ export default function Home() {
               priority
             />
           </a>
-        </div>
-      </div> */}
-
-      <div className={styles.center}>
-        <Image
-          src="/Family.jpeg"
-          alt="Family"
-          // className={styles.vercelLogo}
-          fill={true}
-          // width={100}
-          // height={100}
-          priority
-        />
-        <h1>Haiti Home of Hope</h1>
+        </div> */}
       </div>
 
+      {/* <div className={styles.center}><h1>Haiti Home of Hope</h1></div> */}
       <div className={styles.grid}>
-        <a
-          href="https://beta.nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className={styles.card}
-          target="_blank"
-          rel="noopener noreferrer"
-        >
+        <a href="/about" className={styles.card} rel="noopener noreferrer">
           <h2>
-            Docs <span>-&gt;</span>
+            Who We Are <span>-&gt;</span>
           </h2>
-          <p>Find in-depth information about Next.js features and API.</p>
+          <p>Learn about the Haiti Home of Hope mission and people.</p>
         </a>
 
         <a
@@ -61,9 +44,9 @@ export default function Home() {
           rel="noopener noreferrer"
         >
           <h2>
-            Learn <span>-&gt;</span>
+            What We Do <span>-&gt;</span>
           </h2>
-          <p>Learn about Next.js in an interactive course with&nbsp;quizzes!</p>
+          <p>Learn about the Haiti Home of Hope ministries!</p>
         </a>
 
         <a
@@ -73,9 +56,12 @@ export default function Home() {
           rel="noopener noreferrer"
         >
           <h2>
-            Templates <span>-&gt;</span>
+            Get Involved<span>-&gt;</span>
           </h2>
-          <p>Explore the Next.js 13 playground.</p>
+          <p>
+            Donate or learn more about sponsoring a child at the Haiti Home of
+            Hope Orphanage.
+          </p>
         </a>
 
         <a
@@ -85,11 +71,9 @@ export default function Home() {
           rel="noopener noreferrer"
         >
           <h2>
-            Deploy <span>-&gt;</span>
+            Connect<span>-&gt;</span>
           </h2>
-          <p>
-            Instantly deploy your Next.js site to a shareable URL with Vercel.
-          </p>
+          <p>Get in contact with someone from our team </p>
         </a>
       </div>
     </main>

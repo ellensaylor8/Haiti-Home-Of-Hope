@@ -1,52 +1,43 @@
 :root {
   --max-width: 1100px;
   --border-radius: 12px;
-  --font-mono: ui-monospace, Menlo, Monaco, "Cascadia Mono", "Segoe UI Mono",
-    "Roboto Mono", "Oxygen Mono", "Ubuntu Monospace", "Source Code Pro",
-    "Fira Mono", "Droid Sans Mono", "Courier New", monospace;
+  --font-roboto: "Roboto";
 
-  --foreground-rgb: 0, 0, 0;
-  --background-start-rgb: white;
-  --background-end-rgb: rgb(178, 197, 170);
+  --primary-green-rgb: 176, 199, 177;
+  --secondary-blue-rgb: 29, 29, 53;
+  --secondary-lime-rgb: 235, 254, 245;
+  --foreground-rgb: var(--secondary-blue-rgb);
+  --background-start-rgb: var(--primary-green-rgb);
+  --background-end-rgb: var(--secondary-lime-rgb);
 
-  --primary-glow: conic-gradient(
-    from 180deg at 50% 50%,
-    #b2c5aa 0deg,
-    #b2c5aa 55deg,
-    #b2c5aa 120deg,
-    #b2c5aa 160deg,
-    transparent 360deg
+  --tile-start-rgb: 255, 255, 255;
+  --tile-end-rgb: var(--primary-green-rgb);
+  --tile-border: conic-gradient(
+    #b2c5aa,
+    #b2c5aa,
+    #b2c5aa,
+    #b2c5aa,
+    #b2c5aa,
+    #b2c5aa,
+    #b2c5aa
   );
-  --secondary-glow: radial-gradient(
-    rgba(255, 255, 255, 1),
-    rgba(178, 197, 170, 1)
-  );
-
-  --tile-start-rgb: white
-  --tile-end-rgb: 178 197 170;
-  /* --tile-border: conic-gradient(
-    #00000080,
-    #00000040,
-    #00000030,
-    #00000020,
-    #00000010,
-    #00000010,
-    #00000080
-  ); */
 
   --callout-rgb: 238, 240, 241;
-  --callout-border-rgb: 172, 175, 176;
-  --card-rgb: 180, 185, 188;
-  --card-border-rgb: 131, 134, 135;
+  --callout-border-rgb: 255, 255, 255;
+  --card-rgb: var(--secondary-blue-rgb);
+  --card-border-rgb: 255, 255, 255;
 }
 
-@media (prefers-color-scheme: dark) {
+@media (prefers-color-scheme: light) {
   :root {
     --foreground-rgb: 255, 255, 255;
     --background-start-rgb: 178, 197, 170;
     --background-end-rgb: 178, 197, 170;
 
-    --primary-glow: radial-gradient(rgba(255, 255, 255, 0.4), rgba(255, 255, 255, 0));
+    --primary-glow: radial-gradient(
+      rgba(255, 255, 255, 0.4),
+      rgba(255, 255, 255, 0)
+    );
     --secondary-glow: linear-gradient(
       to bottom right,
       rgba(255, 255, 255, 0),
@@ -100,8 +91,8 @@ a {
   text-decoration: none;
 }
 
-@media (prefers-color-scheme: dark) {
+@media (prefers-color-scheme: light) {
   html {
-    color-scheme: dark;
+    color-scheme: light;
   }
 }
