@@ -1,5 +1,5 @@
 import "./globals.css";
-import ResponsiveAppBar from "./responsiveAppBar.js";
+import NavBar from "./nav.js";
 import { Inter } from "next/font/google";
 
 const inter = Inter({ subsets: ["latin"] });
@@ -14,7 +14,7 @@ export default function RootLayout({ children }) {
     <html lang="en">
       <body>
         {/* Include shared UI here e.g. a header or sidebar */}
-        <ResponsiveAppBar />
+        <NavBar />
 
         {children}
       </body>
