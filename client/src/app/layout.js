@@ -1,5 +1,5 @@
 import "./globals.css";
-import Nav from "./nav.js";
+import ResponsiveAppBar from "./responsiveAppBar.js";
 import { Inter } from "next/font/google";
 
 const inter = Inter({ subsets: ["latin"] });
@@ -12,9 +12,9 @@ export const metadata = {
 export default function RootLayout({ children }) {
   return (
     <html lang="en">
-      <body className={inter.className}>
+      <body>
         {/* Include shared UI here e.g. a header or sidebar */}
-        <Nav />
+        <ResponsiveAppBar />
 
         {children}
       </body>

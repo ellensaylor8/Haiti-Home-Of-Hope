@@ -1,3 +1,9 @@
+html,
+body {
+  margin: 0;
+}
+
+/*
 :root {
   --max-width: 1100px;
   --border-radius: 12px;
@@ -27,6 +33,7 @@
   --card-rgb: var(--secondary-blue-rgb);
   --card-border-rgb: 255, 255, 255;
 }
+
 
 @media (prefers-color-scheme: light) {
   :root {
@@ -95,4 +102,4 @@ a {
   html {
     color-scheme: light;
   }
-}
+} */
