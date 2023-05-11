@@ -1,3 +1,5 @@
+"use client";
+
 import styles from "./story.module.css";
 import Typography from "@mui/material/Typography";
 import Grid from "@mui/material/Grid";

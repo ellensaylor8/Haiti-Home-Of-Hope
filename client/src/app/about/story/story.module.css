@@ -1,5 +1,6 @@
 .storyContainer {
   color: var(--primary-green);
+  height: 75vh;
 }
 
 .storyDescription {

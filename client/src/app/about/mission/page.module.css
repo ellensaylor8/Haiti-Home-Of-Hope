@@ -13,3 +13,8 @@
   height: 75vh;
   object-fit: cover;
 }
+
+.valuePaper {
+  padding: 2rem;
+  color: var(--primary-green);
+}

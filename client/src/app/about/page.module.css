@@ -1,0 +1,7 @@
+.title {
+  padding: 2rem;
+  width: 100%;
+  opacity: 0.6;
+  background-color: var(--primary-green);
+  color: white;
+}

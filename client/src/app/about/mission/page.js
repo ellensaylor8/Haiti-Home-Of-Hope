@@ -1,22 +1,23 @@
-import styles from "./mission.module.css";
+import styles from "./page.module.css";
 import Typography from "@mui/material/Typography";
 import Grid from "@mui/material/Grid";
+import Values from "./values";
 
 export default function Mission() {
   return (
     <Grid container className={styles.missionContainer}>
-      <Grid item xs={12} md={6} className={styles.missionStatement}>
+      <Grid item xs={12} md={8} className={styles.missionStatement}>
         <Typography variant="h3">Our Mission</Typography>
         <br />
         <Typography variant="h6">
           The mission of Haiti Home of Hope, Inc. is to provide spiritual,
           physical, and emotional well-being for those most in need, through
           sharing the gospel, community outreach, orphan prevention, and orphan
-          care. <br /> <br /> Our values: Christ-centered, Gospel-focused,
-          Love-motivated, Mission-driven, Servant-minded.
+          care. <br /> <br />
+          <Values />
         </Typography>
       </Grid>
-      <Grid item xs={12} md={6}>
+      <Grid item xs={12} md={4}>
         <img
           className={styles.missionImage}
           src="/Love_the_fatherless.jpg"
