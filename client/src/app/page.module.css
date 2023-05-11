@@ -31,6 +31,10 @@
   color: white;
 }
 
+.cardsContainer {
+  padding: 3rem 6rem;
+}
+
 /* .main {
   position: relative;
   display: flex;

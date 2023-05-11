@@ -46,9 +46,9 @@ export default function Home() {
           </Typography>
         </Grid>
       </Grid>
-      <Grid container spacing={3} item xs={12}>
+      <Grid container spacing={2} className={styles.cardsContainer}>
         {cards.map((card) => (
-          <Grid item xs={2}>
+          <Grid item xs={12} md={4}>
             <CustomCard
               title={card.title}
               description={card.description}
