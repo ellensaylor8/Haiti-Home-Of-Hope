@@ -10,7 +10,6 @@ import MenuIcon from "@mui/icons-material/Menu";
 import Container from "@mui/material/Container";
 import Button from "@mui/material/Button";
 import MenuItem from "@mui/material/MenuItem";
-import AdbIcon from "@mui/icons-material/Adb";
 import Link from "next/link";
 
 const pages = [
@@ -33,7 +32,12 @@ function NavBar() {
   return (
     <AppBar
       position="static"
-      sx={{ background: "white", color: "rgb(76, 127, 100)" }}
+      sx={{
+        background: "white",
+        color: "rgb(76, 127, 100)",
+        position: "sticky",
+        zIndex: 300,
+      }}
     >
       <Container maxWidth="xl">
         <Toolbar disableGutters>
@@ -93,12 +97,11 @@ function NavBar() {
               ))}
             </Menu>
           </Box>
-          <AdbIcon sx={{ display: { xs: "flex", md: "none" }, mr: 1 }} />
           <Typography
             variant="h5"
             noWrap
             component="a"
-            href=""
+            href="/"
             sx={{
               mr: 2,
               display: { xs: "flex", md: "none" },
