@@ -7,11 +7,12 @@ import {
   IconButton,
   Typography,
   Menu,
-  MenuIcon,
   Container,
   Button,
   MenuItem,
 } from "@mui/material";
+
+import MenuIcon from "@mui/icons-material/Menu";
 import Link from "next/link";
 
 const pages = [
@@ -20,7 +21,7 @@ const pages = [
   { name: "Connect", link: "/connect" },
 ];
 
-function NavBar() {
+export default function NavBar() {
   const [anchorElNav, setAnchorElNav] = useState(null);
 
   const handleOpenNavMenu = (event) => {
@@ -91,11 +92,11 @@ function NavBar() {
               }}
             >
               {pages.map((page) => (
-                <MenuItem key={page.name} onClick={handleCloseNavMenu}>
-                  <Typography textAlign="center">
-                    <Link href={page.link}>{page.name}</Link>
-                  </Typography>
-                </MenuItem>
+                <Link href={page.link}>
+                  <MenuItem key={page.name} onClick={handleCloseNavMenu}>
+                    <Typography textAlign="center">{page.name}</Typography>
+                  </MenuItem>
+                </Link>
               ))}
             </Menu>
           </Box>
@@ -119,13 +120,15 @@ function NavBar() {
           </Typography>
           <Box sx={{ flexGrow: 1, display: { xs: "none", md: "flex" } }}>
             {pages.map((page) => (
-              <Button
-                key={page.name}
-                onClick={handleCloseNavMenu}
-                sx={{ my: 2, color: "rgb(76, 127, 100)", display: "block" }}
-              >
-                <Link href={page.link}>{page.name}</Link>
-              </Button>
+              <Link href={page.link}>
+                <Button
+                  key={page.name}
+                  onClick={handleCloseNavMenu}
+                  sx={{ my: 2, color: "rgb(76, 127, 100)", display: "block" }}
+                >
+                  {page.name}
+                </Button>
+              </Link>
             ))}
           </Box>
 
@@ -139,4 +142,3 @@ function NavBar() {
     </AppBar>
   );
 }
-export default NavBar;

@@ -1,6 +1,6 @@
 "use client";
 import styles from "./page.module.css";
-import { Grid, Typography } from "@mui/material/Typography";
+import { Grid, Typography } from "@mui/material";
 import NavigationCard from "./card";
 
 const cards = [

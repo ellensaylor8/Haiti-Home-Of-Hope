@@ -1,5 +1,6 @@
 import styles from "./page.module.css";
-import { Grid, Typography, Values } from "@mui/material";
+import { Grid, Typography } from "@mui/material";
+import Values from "./values";
 
 export default function Mission() {
   return (

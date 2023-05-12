@@ -8,8 +8,9 @@ import {
   ImageListItem,
   ImageListItemBar,
   IconButton,
-} from "@mui/material/Grid";
-import { FacebookIcon, LinkedInIcon } from "@mui/icons-material";
+} from "@mui/material";
+import FacebookIcon from "@mui/icons-material/Facebook";
+import LinkedInIcon from "@mui/icons-material/LinkedIn";
 import BasicModal from "./modal";
 
 export default function TeamMembers() {
