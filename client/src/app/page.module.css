@@ -26,6 +26,14 @@
   left: 0px;
 }
 
+.MuiCard-root {
+  background-color: var(--primary-green);
+}
+
+.navigationCard {
+  background-color: var(--primary-green);
+}
+
 .MuiTypography-root.verse {
   z-index: 100;
   color: white;

@@ -2,7 +2,7 @@
 import styles from "./page.module.css";
 import Typography from "@mui/material/Typography";
 import Grid from "@mui/material/Grid";
-import CustomCard from "./card";
+import NavigationCard from "./card";
 
 const cards = [
   {
@@ -48,8 +48,8 @@ export default function Home() {
       </Grid>
       <Grid container spacing={2} className={styles.cardsContainer}>
         {cards.map((card) => (
-          <Grid item xs={12} md={4}>
-            <CustomCard
+          <Grid item xs={12} md={4} key={card.title}>
+            <NavigationCard
               title={card.title}
               description={card.description}
               link={card.link}

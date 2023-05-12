@@ -1,12 +1,16 @@
+import styles from "./page.module.css";
 import Card from "@mui/material/Card";
 import CardContent from "@mui/material/CardContent";
 import Typography from "@mui/material/Typography";
 import { CardActionArea } from "@mui/material";
 import Link from "next/link";
 
-export default function CustomCard(props) {
+export default function NavigationCard(props) {
   return (
-    <Card sx={{ maxWidth: 345, color: "white" }}>
+    <Card
+      sx={{ maxWidth: 345, color: "white" }}
+      className={styles.navigationCard}
+    >
       <CardActionArea>
         <Link href={props.link}>
           <CardContent>
