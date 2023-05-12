@@ -1,6 +1,6 @@
 import { forwardRef, useImperativeHandle, useState } from "react";
 import styles from "./page.module.css";
-import Modal from "@mui/material/Modal";
+import { Modal } from "@mui/material";
 import MediaCard from "./mediaCard";
 
 export default forwardRef(function BasicModal(props, ref) {

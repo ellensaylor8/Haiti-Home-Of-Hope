@@ -1,9 +1,6 @@
 import { forwardRef } from "react";
 import styles from "./page.module.css";
-import Card from "@mui/material/Card";
-import CardContent from "@mui/material/CardContent";
-import CardMedia from "@mui/material/CardMedia";
-import Typography from "@mui/material/Typography";
+import { Card, CardContent, CardMedia, Typography } from "@mui/material";
 
 export default forwardRef(function MediaCard(props, ref) {
   return (

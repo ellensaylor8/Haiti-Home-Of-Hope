@@ -1,5 +1,5 @@
 import styles from "./page.module.css";
-import { Grid, Typography, Paper, Box } from "@mui/material";
+import { Grid, Typography, Paper } from "@mui/material";
 import ChurchIcon from "@mui/icons-material/Church";
 import AutoStoriesIcon from "@mui/icons-material/AutoStories";
 import FavoriteIcon from "@mui/icons-material/Favorite";

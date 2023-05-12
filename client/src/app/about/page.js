@@ -1,7 +1,6 @@
 "use client";
 import styles from "./page.module.css";
-import Grid from "@mui/material/Grid";
-import Typography from "@mui/material/Typography";
+import { Grid, Typography } from "@mui/material";
 import TeamMembers from "./team/page";
 import Story from "./story/page";
 import Mission from "./mission/page";

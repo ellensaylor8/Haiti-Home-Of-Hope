@@ -1,6 +1,5 @@
 import styles from "./page.module.css";
-import ImageList from "@mui/material/ImageList";
-import ImageListItem from "@mui/material/ImageListItem";
+import { ImageList, ImageListItem } from "@mui/material";
 
 function srcset(image, size, rows = 1, cols = 1) {
   return {

@@ -1,8 +1,5 @@
 import styles from "./page.module.css";
-import Card from "@mui/material/Card";
-import CardContent from "@mui/material/CardContent";
-import Typography from "@mui/material/Typography";
-import { CardActionArea } from "@mui/material";
+import { Card, CardContent, CardActionArea, Typography } from "@mui/material";
 import Link from "next/link";
 
 export default function NavigationCard(props) {

@@ -2,13 +2,14 @@
 
 import styles from "./page.module.css";
 import { useRef } from "react";
-import Grid from "@mui/material/Grid";
-import ImageList from "@mui/material/ImageList";
-import ImageListItem from "@mui/material/ImageListItem";
-import ImageListItemBar from "@mui/material/ImageListItemBar";
-import IconButton from "@mui/material/IconButton";
-import FacebookIcon from "@mui/icons-material/Facebook";
-import LinkedInIcon from "@mui/icons-material/LinkedIn";
+import {
+  Grid,
+  ImageList,
+  ImageListItem,
+  ImageListItemBar,
+  IconButton,
+} from "@mui/material/Grid";
+import { FacebookIcon, LinkedInIcon } from "@mui/icons-material";
 import BasicModal from "./modal";
 
 export default function TeamMembers() {
