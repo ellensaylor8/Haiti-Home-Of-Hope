@@ -6,6 +6,7 @@ import ImageListItem from "@mui/material/ImageListItem";
 import ImageListItemBar from "@mui/material/ImageListItemBar";
 import IconButton from "@mui/material/IconButton";
 import InfoIcon from "@mui/icons-material/Info";
+import FacebookIcon from "@mui/icons-material/Facebook";
 
 export default function TeamMembers() {
   return (
@@ -27,6 +28,7 @@ export default function TeamMembers() {
                   sx={{ color: "rgba(255, 255, 255, 0.54)" }}
                   aria-label={`info about ${item.title}`}
                 >
+                  <FacebookIcon />
                   <InfoIcon />
                 </IconButton>
               }

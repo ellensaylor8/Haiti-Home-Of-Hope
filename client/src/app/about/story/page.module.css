@@ -1,10 +1,20 @@
 .storyContainer {
   color: var(--primary-green);
-  height: 75vh;
 }
 
 .storyDescription {
   padding: 6rem;
+}
+
+.imgListGrid {
+  height: 65vh;
+}
+
+.imgList {
+  height: 100%;
+  width: 100%;
+  margin-block-start: unset;
+  margin-block-end: unset;
 }
 
 .imgListItem {

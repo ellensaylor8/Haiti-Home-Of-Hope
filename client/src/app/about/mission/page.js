@@ -6,16 +6,20 @@ import Values from "./values";
 export default function Mission() {
   return (
     <Grid container className={styles.missionContainer}>
-      <Grid item xs={12} md={8} className={styles.missionStatement}>
-        <Typography variant="h3">Our Mission</Typography>
-        <br />
-        <Typography variant="h6">
-          The mission of Haiti Home of Hope, Inc. is to provide spiritual,
-          physical, and emotional well-being for those most in need, through
-          sharing the gospel, community outreach, orphan prevention, and orphan
-          care. <br /> <br />
+      <Grid container item xs={12} md={8} className={styles.missionStatement}>
+        <Grid item xs={12}>
+          <Typography variant="h3">Our Mission</Typography>
+          <br />
+          <Typography variant="h6">
+            The mission of Haiti Home of Hope, Inc. is to provide spiritual,
+            physical, and emotional well-being for those most in need, through
+            sharing the gospel, community outreach, orphan prevention, and
+            orphan care. <br /> <br />
+          </Typography>
+        </Grid>
+        <Grid item xs={12}>
           <Values />
-        </Typography>
+        </Grid>
       </Grid>
       <Grid item xs={12} md={4}>
         <img

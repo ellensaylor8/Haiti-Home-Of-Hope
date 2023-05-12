@@ -1,6 +1,6 @@
 "use client";
 
-import styles from "./story.module.css";
+import styles from "./page.module.css";
 import Typography from "@mui/material/Typography";
 import Grid from "@mui/material/Grid";
 import QuiltedImageList from "./imageList.js";
@@ -8,7 +8,7 @@ import QuiltedImageList from "./imageList.js";
 export default function Story() {
   return (
     <Grid container className={styles.storyContainer}>
-      <Grid item xs={12} md={6}>
+      <Grid item xs={12} md={6} className={styles.imgListGrid}>
         <QuiltedImageList />
       </Grid>
       <Grid item xs={12} md={6} className={styles.storyDescription}>

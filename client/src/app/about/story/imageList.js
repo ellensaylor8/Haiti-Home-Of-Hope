@@ -1,4 +1,4 @@
-import styles from "./story.module.css";
+import styles from "./page.module.css";
 import ImageList from "@mui/material/ImageList";
 import ImageListItem from "@mui/material/ImageListItem";
 
@@ -14,7 +14,7 @@ function srcset(image, size, rows = 1, cols = 1) {
 export default function QuiltedImageList() {
   return (
     <ImageList
-      sx={{ width: "100%", height: "75vh" }}
+      className={styles.imgList}
       variant="quilted"
       cols={4}
       rowHeight={121}
@@ -72,8 +72,8 @@ const itemData = [
     cols: 2,
   },
   {
-    img: "/Preaching_Gaspar.jpg",
-    title: "Preaching in Gaspar",
+    img: "/babyWoody5mths.jpg",
+    title: "Baby Woody 5 mths",
   },
   {
     img: "/Lumanes.jpg",
@@ -92,5 +92,13 @@ const itemData = [
   {
     img: "/CircleOfKiddos.jpg",
     title: "Circle of children",
+  },
+  {
+    img: "/lavi.jpg",
+    title: "Lavi",
+  },
+  {
+    img: "/Fricot.jpg",
+    title: "Fricot 8 yrs old",
   },
 ];
