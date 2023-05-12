@@ -39,66 +39,66 @@ export default function QuiltedImageList() {
 
 const itemData = [
   {
-    img: "/HHH_compound_2008.jpg",
+    img: "/images/ministry/HHH_compound_2008.jpg",
     title: "HHH Compound 2008",
     rows: 2,
     cols: 2,
   },
   {
-    img: "/campfire.jpg",
+    img: "/images/ministry/campfire.jpg",
     title: "Campfire",
   },
   {
-    img: "/Kiddos.jpg",
+    img: "/images/ministry/Kiddos.jpg",
     title: "Kiddos",
   },
   {
-    img: "/Devenel.jpg",
+    img: "/images/ministry/Devenel.jpg",
     title: "Devenel",
   },
   {
-    img: "/Preaching_Gaspar.jpg",
+    img: "/images/ministry/Preaching_Gaspar.jpg",
     title: "Preaching in Gaspar",
   },
   {
-    img: "/Family_NoText.jpg",
+    img: "/images/ministry/Family_NoText.jpg",
     title: "Family",
     cols: 2,
   },
   {
-    img: "/SuckingThumb.jpg",
+    img: "/images/ministry/SuckingThumb.jpg",
     title: "Kiddo sucking her thumb",
     rows: 2,
     cols: 2,
   },
   {
-    img: "/babyWoody5mths.jpg",
+    img: "/images/ministry/babyWoody5mths.jpg",
     title: "Baby Woody 5 mths",
   },
   {
-    img: "/Lumanes.jpg",
+    img: "/images/ministry/Lumanes.jpg",
     title: "Lumanes",
   },
   {
-    img: "/Kiddo_RedShirt.jpg",
+    img: "/images/ministry/Kiddo_RedShirt.jpg",
     title: "Kiddo in Red Shirt",
     rows: 2,
     cols: 2,
   },
   {
-    img: "/Jenn_Infant.jpg",
+    img: "/images/ministry/Jenn_Infant.jpg",
     title: "Jennifer holding an infant",
   },
   {
-    img: "/CircleOfKiddos.jpg",
+    img: "/images/ministry/CircleOfKiddos.jpg",
     title: "Circle of children",
   },
   {
-    img: "/lavi.jpg",
+    img: "/images/ministry/lavi.jpg",
     title: "Lavi",
   },
   {
-    img: "/Fricot.jpg",
+    img: "/images/ministry/Fricot.jpg",
     title: "Fricot 8 yrs old",
   },
 ];

@@ -58,7 +58,7 @@ export default function TeamMembers() {
 
 const itemData = [
   {
-    img: "/Webb_Bio.jpg",
+    img: "/images/bio/Webb_Bio.jpg",
     name: "Web Chenault",
     title: "Founder & Visionary",
     facebook: null,
@@ -66,7 +66,7 @@ const itemData = [
     bio: "The late Webb Chenault had a passion and heart for the Haitian children. His vision to create an orphanage in Haiti, and his willingness to entrust his property to Red Bridge Baptist Church, allowed Haiti Home of Hope to be founded. Only eternity will reveal the fruitfulness of this man’s faithfulness.",
   },
   {
-    img: "/Campbell_Bio.jpg",
+    img: "/images/bio/Campbell_Bio.jpg",
     name: "Bill and Jennifer Campbell",
     title: "Directors of Field Operations",
     facebook: "https://www.facebook.com/jennifer.w.campbell.98",
@@ -74,7 +74,7 @@ const itemData = [
     bio: "Bill and Jennifer were commissioned to the field on January 5, 2003 by Red Bridge Baptist Church. They have led and directed the ministry since the foundation. Bill and Jennifer direct all aspects of the work on the ground at the Haiti Home of Hope. Their ministry involves full time care for 44 orphans, running the Feeding Clinic and Milk Clinic every week, maintenance of the property, directing the Haitian staff, and many more tasks. Their dedication and servant attitude towards the Lord through serving these children is truly an inspiration for all.",
   },
   {
-    img: "/Pastor_Bio.jpg",
+    img: "/images/bio/Pastor_Bio.jpg",
     name: "Dr. Victor Borden",
     title: "President",
     facebook: "https://www.facebook.com/vic.borden",
@@ -84,7 +84,7 @@ const itemData = [
     \n Vic still wears many hats in the ministry serving in roles such as trip coordinator, community liaison, organizing fundraisers, and chief cheerleader.  He is always willing to share with others what the Lord has done in Haiti. Vic Borden serves as President of the Board of Directors.`,
   },
   {
-    img: "/Chris_Bio.jpg",
+    img: "/images/bio/Chris_Bio.jpg",
     name: "Chris Brennan",
     title: "Chairman",
     facebook: "https://www.facebook.com/brenny007",

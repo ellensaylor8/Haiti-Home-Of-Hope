@@ -6,7 +6,7 @@
 }
 .headerGrid::before {
   content: "";
-  background-image: url("/CircleOfKiddos.jpg");
+  background-image: url("/images/ministry/CircleOfKiddos.jpg");
   background-repeat: no-repeat;
   background-size: cover;
   position: absolute;

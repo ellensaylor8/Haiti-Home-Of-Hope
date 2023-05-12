@@ -24,7 +24,7 @@ export default function Mission() {
       <Grid item xs={12} md={4}>
         <img
           className={styles.missionImage}
-          src="/Love_the_fatherless.jpg"
+          src="/images/ministry/Love_the_fatherless.jpg"
           alt="Picture of staff member holding orphan"
         ></img>
       </Grid>
