@@ -92,8 +92,8 @@ export default function NavBar() {
               }}
             >
               {pages.map((page) => (
-                <Link href={page.link}>
-                  <MenuItem key={page.name} onClick={handleCloseNavMenu}>
+                <Link href={page.link} key={page.name}>
+                  <MenuItem onClick={handleCloseNavMenu}>
                     <Typography textAlign="center">{page.name}</Typography>
                   </MenuItem>
                 </Link>
@@ -120,9 +120,8 @@ export default function NavBar() {
           </Typography>
           <Box sx={{ flexGrow: 1, display: { xs: "none", md: "flex" } }}>
             {pages.map((page) => (
-              <Link href={page.link}>
+              <Link href={page.link} key={page.name}>
                 <Button
-                  key={page.name}
                   onClick={handleCloseNavMenu}
                   sx={{ my: 2, color: "rgb(76, 127, 100)", display: "block" }}
                 >
@@ -133,7 +132,14 @@ export default function NavBar() {
           </Box>
 
           <Box sx={{ flexGrow: 0 }}>
-            <Button sx={{ color: "white", background: "rgb(76, 127, 100)" }}>
+            <Button
+              sx={{ color: "white", background: "rgb(76, 127, 100)" }}
+              onClick={() => {
+                window.open(
+                  "https://donate.stripe.com/test_dR6g1h44IeGr0F2000"
+                );
+              }}
+            >
               Donate
             </Button>
           </Box>
