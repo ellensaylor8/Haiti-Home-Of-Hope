@@ -19,15 +19,17 @@ export default function TeamMembers() {
   const imgListItemRef = useRef();
 
   const [visibleTeamMemberName, setVisibleTeamMemberName] = useState();
-  const [mobile, setMobile] = useState(window.innerWidth <= 500);
-  const handleWindowSizeChange = () => {
-    setMobile(window.innerWidth <= 500);
-  };
+  const [mobile, setMobile] = useState(false);
 
   useEffect(() => {
-    window.addEventListener("resize", handleWindowSizeChange);
+    setMobile(window.innerWidth <= 500);
+    window.addEventListener("resize", () => {
+      setMobile(window.innerWidth <= 500);
+    });
     return () => {
-      window.removeEventListener("resize", handleWindowSizeChange);
+      window.removeEventListener("resize", () => {
+        setWindowWidth(window.innerWidth);
+      });
     };
   }, []);
   return (
