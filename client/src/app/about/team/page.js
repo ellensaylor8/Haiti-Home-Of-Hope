@@ -1,13 +1,14 @@
 "use client";
 
 import styles from "./page.module.css";
-import { useRef } from "react";
+import { useRef, useState } from "react";
 import {
   Grid,
   ImageList,
   ImageListItem,
   ImageListItemBar,
   IconButton,
+  Slide,
 } from "@mui/material";
 import FacebookIcon from "@mui/icons-material/Facebook";
 import LinkedInIcon from "@mui/icons-material/LinkedIn";
@@ -15,42 +16,59 @@ import BasicModal from "./modal";
 
 export default function TeamMembers() {
   const ref = useRef();
+  const containerRef = useRef();
+  const [visibleTeamMemberName, setVisibleTeamMemberName] = useState();
+
   return (
     <Grid item xs={12} className={styles.teamContainer}>
       <BasicModal ref={ref} />
-      <ImageList cols={4}>
+      <ImageList cols={4} gap={16} ref={containerRef}>
         {itemData.map((item) => (
-          <ImageListItem className={styles.imgListItem} key={item.img}>
+          <ImageListItem
+            key={item.img}
+            onMouseEnter={() => setVisibleTeamMemberName(item.name)}
+            onMouseLeave={() => setVisibleTeamMemberName(null)}
+          >
             <img
+              className={styles.listItemImage}
               src={`${item.img}?w=248&fit=crop&auto=format`}
               srcSet={`${item.img}?w=248&fit=crop&auto=format&dpr=2 2x`}
               alt={item.title}
               loading="lazy"
               onClick={() => ref.current.handleOpen(item)}
-            />
-            <ImageListItemBar
-              title={item.name}
-              subtitle={item.title}
-              actionIcon={
-                <IconButton
-                  sx={{ color: "rgba(255, 255, 255, 0.54)" }}
-                  aria-label={`info about ${item.name}`}
-                >
-                  {item.facebook && (
-                    <FacebookIcon
-                      className={styles.facebookIcon}
-                      onClick={() => window.open(item.facebook)}
-                    />
-                  )}
-                  {item.linkedIn && (
-                    <LinkedInIcon
-                      className={styles.linkedInIcon}
-                      onClick={() => window.open(item.linkedIn)}
-                    />
-                  )}
-                </IconButton>
-              }
-            />
+            />{" "}
+            <Slide
+              direction="up"
+              in={item.name === visibleTeamMemberName}
+              container={containerRef.current}
+            >
+              <ImageListItemBar
+                title={item.name}
+                subtitle={item.title}
+                actionIcon={
+                  <>
+                    {item.facebook && (
+                      <IconButton
+                        className={styles.iconButton}
+                        aria-label={`info about ${item.name}`}
+                        onClick={() => window.open(item.facebook)}
+                      >
+                        <FacebookIcon className={styles.facebookIcon} />
+                      </IconButton>
+                    )}
+                    {item.linkedIn && (
+                      <IconButton
+                        className={styles.iconButton}
+                        aria-label={`info about ${item.name}`}
+                        onClick={() => window.open(item.linkedIn)}
+                      >
+                        <LinkedInIcon className={styles.linkedInIcon} />
+                      </IconButton>
+                    )}
+                  </>
+                }
+              />
+            </Slide>
           </ImageListItem>
         ))}
       </ImageList>

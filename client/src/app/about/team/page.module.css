@@ -2,17 +2,16 @@
   padding: 0rem 3rem;
 }
 
-.imgListItem {
-  -webkit-filter: sepia(100%);
-  filter: sepia(100%);
-  -webkit-transition: 0.3s ease-in-out;
-  transition: 0.3s ease-in-out;
+.listItemImage {
+  transition: "all .2s";
 }
 
-.imgListItem:hover {
+.listItemImage:hover {
   cursor: pointer;
-  -webkit-filter: sepia(0);
-  filter: sepia(0);
+  -webkit-filter: grayscale(1);
+  filter: grayscale(1);
+  -webkit-transition: 0.3s ease-in-out;
+  transition: 0.3s ease-in-out;
 }
 
 .modal {
@@ -34,7 +33,11 @@
   height: 400px;
 }
 
-.facebookIcon:hover {
+.iconButton {
+  padding-left: 0.05rem;
+}
+
+.facebookIcon {
   fill: #1977f2;
 }
 .linkedInIcon {

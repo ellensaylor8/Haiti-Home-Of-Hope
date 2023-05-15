@@ -1,3 +1,4 @@
+"use client";
 import styles from "./page.module.css";
 import { Grid, Typography } from "@mui/material";
 import Values from "./values";
