@@ -1,7 +1,7 @@
 "use client";
 
 import styles from "./page.module.css";
-import { useRef, useState } from "react";
+import { useEffect, useRef, useState } from "react";
 import {
   Grid,
   ImageList,
@@ -15,34 +15,47 @@ import LinkedInIcon from "@mui/icons-material/LinkedIn";
 import BasicModal from "./modal";
 
 export default function TeamMembers() {
-  const ref = useRef();
-  const containerRef = useRef();
-  const [visibleTeamMemberName, setVisibleTeamMemberName] = useState();
+  const modalRef = useRef();
+  const imgListItemRef = useRef();
 
+  const [visibleTeamMemberName, setVisibleTeamMemberName] = useState();
+  const [mobile, setMobile] = useState(window.innerWidth <= 500);
+  const handleWindowSizeChange = () => {
+    setMobile(window.innerWidth <= 500);
+  };
+
+  useEffect(() => {
+    window.addEventListener("resize", handleWindowSizeChange);
+    return () => {
+      window.removeEventListener("resize", handleWindowSizeChange);
+    };
+  }, []);
   return (
     <Grid item xs={12} className={styles.teamContainer}>
-      <BasicModal ref={ref} />
-      <ImageList cols={4} gap={16} ref={containerRef}>
+      <BasicModal ref={modalRef} />
+      <ImageList cols={mobile ? 1 : 4} gap={16}>
         {itemData.map((item) => (
           <ImageListItem
+            ref={imgListItemRef}
+            className={styles.listItem}
             key={item.img}
             onMouseEnter={() => setVisibleTeamMemberName(item.name)}
             onMouseLeave={() => setVisibleTeamMemberName(null)}
           >
             <img
-              className={styles.listItemImage}
               src={`${item.img}?w=248&fit=crop&auto=format`}
               srcSet={`${item.img}?w=248&fit=crop&auto=format&dpr=2 2x`}
               alt={item.title}
               loading="lazy"
-              onClick={() => ref.current.handleOpen(item)}
-            />{" "}
+              onClick={() => modalRef.current.handleOpen(item)}
+            />
             <Slide
               direction="up"
-              in={item.name === visibleTeamMemberName}
-              container={containerRef.current}
+              in={mobile || item.name === visibleTeamMemberName}
+              container={imgListItemRef.current}
             >
               <ImageListItemBar
+                position={mobile ? "below" : "bottom"}
                 title={item.name}
                 subtitle={item.title}
                 actionIcon={
