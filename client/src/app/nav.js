@@ -1,4 +1,5 @@
 "use client";
+import styles from "./page.module.css";
 import { useState } from "react";
 import {
   AppBar,
@@ -12,6 +13,8 @@ import {
   MenuItem,
 } from "@mui/material";
 
+import EmailIcon from "@mui/icons-material/Email";
+import FacebookIcon from "@mui/icons-material/Facebook";
 import MenuIcon from "@mui/icons-material/Menu";
 import Link from "next/link";
 
@@ -132,7 +135,26 @@ export default function NavBar() {
           </Box>
 
           <Box sx={{ flexGrow: 0 }}>
+            <IconButton
+              onClick={() => {
+                window.location.href = "mailto:contact@haitihomeofhope.org";
+              }}
+            >
+              <EmailIcon size="large" />
+            </IconButton>
+          </Box>
+          <Box sx={{ flexGrow: 0 }}>
+            <IconButton
+              onClick={() => {
+                window.open("https://www.facebook.com/HaitiHomeOfHope");
+              }}
+            >
+              <FacebookIcon size="large" />
+            </IconButton>
+          </Box>
+          <Box sx={{ flexGrow: 0 }}>
             <Button
+              id={styles.donateButton}
               sx={{ color: "white", background: "rgb(76, 127, 100)" }}
               onClick={() => {
                 window.open(

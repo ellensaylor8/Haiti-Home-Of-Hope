@@ -1,6 +1,6 @@
 "use client";
 import styles from "./page.module.css";
-import { Grid, Typography } from "@mui/material";
+import { Button, Grid, Typography } from "@mui/material";
 import NavigationCard from "./card";
 
 const cards = [
@@ -39,7 +39,12 @@ export default function Home() {
           <Typography variant="h1" align="left">
             Haiti Home of Hope
           </Typography>
-          <Typography variant="h5" align="left" className="verse">
+          <Typography variant="h5" align="left">
+            Raising a generation of Godly young men and women, equipped to go
+            out and live and thrive in their community and share the Hope of the
+            Gospel.
+          </Typography>
+          <Typography variant="overline" align="left" className="verse">
             "A Father of the fatherless and a Judge of the widow is God in His
             holy habitation." -Psalm 68:5
           </Typography>
