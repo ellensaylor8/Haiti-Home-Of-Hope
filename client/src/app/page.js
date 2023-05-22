@@ -1,6 +1,6 @@
 "use client";
 import styles from "./page.module.css";
-import { Button, Grid, Typography } from "@mui/material";
+import { Grid, Typography } from "@mui/material";
 import NavigationCard from "./card";
 
 const cards = [
@@ -25,17 +25,7 @@ export default function Home() {
   return (
     <Grid container>
       <Grid container className={styles.headerGrid}>
-        <Grid
-          item
-          xs={10}
-          className="verse"
-          sx={{
-            color: "white",
-            zIndex: 100,
-            padding: "1rem",
-            marginTop: "20vh",
-          }}
-        >
+        <Grid item xs={10} className={styles.greeting}>
           <Typography variant="h1" align="left">
             Haiti Home of Hope
           </Typography>
@@ -44,10 +34,10 @@ export default function Home() {
             out and live and thrive in their community and share the Hope of the
             Gospel.
           </Typography>
-          <Typography variant="overline" align="left" className="verse">
+          {/* <Typography variant="overline" align="left" className="verse">
             "A Father of the fatherless and a Judge of the widow is God in His
             holy habitation." -Psalm 68:5
-          </Typography>
+          </Typography> */}
         </Grid>
       </Grid>
       <Grid container spacing={2} className={styles.cardsContainer}>

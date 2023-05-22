@@ -1,0 +1,46 @@
+.banner {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  min-height: 12vh;
+}
+.banner::before {
+  content: "";
+  background-image: url("/images/ministry/CircleOfKiddos.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: absolute;
+  top: -200px;
+  right: 0px;
+  bottom: 0px;
+  left: 0px;
+}
+
+.banner::after {
+  content: "";
+  background-color: rgb(76, 127, 100, 0.5);
+  position: absolute;
+  top: 0px;
+  right: 0px;
+  bottom: 0px;
+  left: 0px;
+}
+
+.gridRows {
+  min-height: 75vh;
+  border: 15px solid white;
+  align-items: center;
+}
+
+.textGrid {
+  background-color: rgb(76, 127, 100, 0.3);
+  min-height: 75vh;
+  outline: 8px double var(--primary-green);
+  outline-offset: -32px;
+}
+
+.sectionTitles {
+  color: var(--primary-green);
+  font-weight: 400;
+  margin-top: 8rem;
+}

@@ -26,9 +26,12 @@
   left: 0px;
 }
 
-.MuiTypography-root.verse {
+.greeting {
   z-index: 100;
   color: white;
+  z-index: 100;
+  padding: 1rem;
+  margin-top: 20vh;
 }
 
 .cardsContainer {
@@ -42,4 +45,15 @@
 #donateButton:hover {
   color: var(--primary-green);
   border: 2px solid var(--primary-green);
+}
+
+@media only screen and (max-width: 400px) {
+  .headerGrid::before {
+    background-size: contain;
+    top: 0px;
+  }
+
+  .greeting {
+    margin-top: 40vh;
+  }
 }

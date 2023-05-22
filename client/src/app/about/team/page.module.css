@@ -4,10 +4,6 @@
 
 .listItem:hover {
   cursor: pointer;
-  -webkit-filter: grayscale(1);
-  filter: grayscale(1);
-  -webkit-transition: 0.3s ease-in-out;
-  transition: 0.3s ease-in-out;
 }
 
 .modal {
@@ -34,10 +30,10 @@
 }
 
 .facebookIcon {
-  fill: #1977f2;
+  fill: white;
 }
 .linkedInIcon {
-  fill: #0077b5;
+  fill: white;
 }
 
 @media only screen and (max-width: 500px) {
