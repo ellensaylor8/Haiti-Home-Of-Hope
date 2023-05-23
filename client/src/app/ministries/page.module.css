@@ -2,7 +2,7 @@
   position: relative;
   display: flex;
   flex-direction: column;
-  min-height: 12vh;
+  min-height: 8vh;
 }
 .banner::before {
   content: "";
@@ -10,7 +10,7 @@
   background-repeat: no-repeat;
   background-size: cover;
   position: absolute;
-  top: -200px;
+  top: -600px;
   right: 0px;
   bottom: 0px;
   left: 0px;
@@ -29,7 +29,9 @@
 .gridRows {
   min-height: 75vh;
   border: 15px solid white;
+  border-bottom: 0;
   align-items: center;
+  position: relative;
 }
 
 .textGrid {
@@ -37,10 +39,45 @@
   min-height: 75vh;
   outline: 8px double var(--primary-green);
   outline-offset: -32px;
+  padding: 3rem;
 }
 
 .sectionTitles {
   color: var(--primary-green);
   font-weight: 400;
-  margin-top: 8rem;
+  margin-top: 6rem;
+}
+
+.ministryDescription {
+  margin: 1rem 6rem;
+}
+
+#orphanImage {
+  background-image: url("/images/ministry/Love_the_fatherless.jpg");
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 50%;
+  z-index: -2;
+  width: 100%;
+  height: 100%;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center center;
+  border-left: 15px solid white;
+}
+
+#milkClinicImage {
+  background-image: url("/images/ministry/milk_clinic.jpg");
+  content: "";
+  z-index: -2;
+  width: 100%;
+  height: 100%;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center center;
+}
+
+#milkClinicDescription {
+  border-left: 15px solid white;
 }
