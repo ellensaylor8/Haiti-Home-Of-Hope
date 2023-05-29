@@ -2,7 +2,7 @@
   position: relative;
   display: flex;
   flex-direction: column;
-  min-height: 75vh;
+  min-height: 90vh;
 }
 .headerGrid::before {
   content: "";
@@ -10,7 +10,7 @@
   background-repeat: no-repeat;
   background-size: cover;
   position: absolute;
-  top: -200px;
+  top: -225px;
   right: 0px;
   bottom: 0px;
   left: 0px;
@@ -36,6 +36,12 @@
 
 .cardsContainer {
   padding: 3rem 6rem;
+  background-color: rgb(76, 127, 100, 0.25);
+  border-top: 25px solid white;
+}
+
+.navigationCard:hover {
+  background-color: whitesmoke;
 }
 
 #donateButton {

@@ -37,7 +37,7 @@ export default function NavBar() {
 
   return (
     <AppBar
-      position="static"
+      position="fixed"
       sx={{
         background: "white",
         color: "rgb(76, 127, 100)",

@@ -2,15 +2,15 @@
   position: relative;
   display: flex;
   flex-direction: column;
-  min-height: 8vh;
+  min-height: 90vh;
 }
 .banner::before {
   content: "";
-  background-image: url("/images/ministry/CircleOfKiddos.jpg");
+  background-image: url("/images/ministry/holding_hands.jpg");
   background-repeat: no-repeat;
   background-size: cover;
   position: absolute;
-  top: -600px;
+  top: 0px;
   right: 0px;
   bottom: 0px;
   left: 0px;
@@ -26,30 +26,93 @@
   left: 0px;
 }
 
-.gridRows {
+.pageTitle {
+  color: white;
+  z-index: 200;
+  margin-top: 40vh;
+  font-weight: 100;
+  text-transform: uppercase;
+  letter-spacing: 6px;
+  line-height: 1.1;
+}
+
+.gridRowsLeft {
   min-height: 75vh;
   border: 15px solid white;
   border-bottom: 0;
-  align-items: center;
+  text-align: left;
   position: relative;
 }
 
-.textGrid {
-  background-color: rgb(76, 127, 100, 0.3);
+.gridRowsRight {
   min-height: 75vh;
-  outline: 8px double var(--primary-green);
-  outline-offset: -32px;
-  padding: 3rem;
+  border: 15px solid white;
+  border-bottom: 0;
+  text-align: left;
+  position: relative;
 }
 
+.gridRowsLeft:after {
+  content: "";
+  position: absolute;
+  z-index: 1;
+  bottom: 0;
+  left: 2rem;
+  pointer-events: none;
+  background-image: linear-gradient(
+    to left,
+    rgba(255, 255, 255, 0),
+    rgba(255, 255, 255, 1) 50%
+  );
+  width: 100%;
+  height: 100%;
+}
+
+/* .gridRowsRight:after {
+  content: "";
+  position: absolute;
+  z-index: 1;
+  bottom: 0;
+  left: 0;
+  pointer-events: none;
+  background-image: linear-gradient(
+    to right,
+    rgba(255, 255, 255, 0),
+    rgba(255, 255, 255, 1) 50%
+  );
+  width: 100%;
+  height: 100%;
+} */
+
+.textGrid {
+  min-height: 75vh;
+  padding: 3rem;
+  z-index: 4;
+}
+/* 
 .sectionTitles {
   color: var(--primary-green);
-  font-weight: 400;
-  margin-top: 6rem;
+  z-index: 200;
+  margin-top: 40vh;
+  font-weight: 100;
+  text-transform: uppercase;
+  letter-spacing: 6px;
+  line-height: 1.1;
+  margin-top: 5rem;
+} */
+
+.ministryDescriptionLeft {
+  margin: 2rem 4rem 0 0;
+  line-height: 2;
+  color: grey;
+  font-weight: 300;
 }
 
-.ministryDescription {
-  margin: 1rem 6rem;
+.ministryDescriptionRight {
+  margin: 2rem 0 4rem 0;
+  line-height: 2;
+  color: grey;
+  font-weight: 300;
 }
 
 #orphanImage {
@@ -68,7 +131,7 @@
 }
 
 #milkClinicImage {
-  background-image: url("/images/ministry/milk_clinic.jpg");
+  background-image: url("/images/ministry/babyWoodyDrinkingMilk.jpg");
   content: "";
   z-index: -2;
   width: 100%;
@@ -76,8 +139,56 @@
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center center;
+  border: 40px solid white;
 }
 
 #milkClinicDescription {
   border-left: 15px solid white;
+}
+
+#communityOutreachDescription {
+  border-left: 15px solid white;
+}
+
+#feedingClinicImage {
+  background-image: url("/images/ministry/feeding_clinic.jpeg");
+  content: "";
+  z-index: -2;
+  width: 100%;
+  height: 100%;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center center;
+  border-left: 15px solid white;
+}
+
+#communityOutreachImage {
+  background-image: url("/images/ministry/community_outreach.jpeg");
+  content: "";
+  z-index: -2;
+  width: 100%;
+  height: 100%;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center center;
+  border: 40px solid white;
+}
+
+#learnMoreButton {
+  margin-top: 1rem;
+  color: white;
+  background-color: var(--primary-green);
+}
+@media only screen and (max-width: 400px) {
+  .ministryDescription {
+    margin: 1rem 1rem;
+  }
+
+  .textGrid {
+    padding: 0rem;
+  }
+
+  #orphanImage {
+    background-image: none;
+  }
 }

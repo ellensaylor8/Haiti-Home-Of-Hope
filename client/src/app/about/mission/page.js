@@ -8,7 +8,9 @@ export default function Mission() {
     <Grid container className={styles.missionContainer}>
       <Grid container item xs={12} md={8} className={styles.missionStatement}>
         <Grid item xs={12}>
-          <Typography variant="h3">Our Mission</Typography>
+          <Typography variant="h3" className={styles.sectionTitles}>
+            Our Mission
+          </Typography>
           <br />
           <Typography variant="h6">
             The mission of Haiti Home of Hope, Inc. is to provide spiritual,

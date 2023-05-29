@@ -8,10 +8,16 @@ import Mission from "./mission/page";
 export default function Page() {
   return (
     <Grid container spacing={0}>
-      <Typography variant="h3" className={styles.pageTitle}>
-        Who We Are
-      </Typography>
-      <Grid item xs={12}>
+      <Grid item xs={12} className={styles.banner}>
+        <Typography
+          variant="h4"
+          className={styles.pageTitle}
+          textAlign="center"
+        >
+          Who We Are
+        </Typography>
+      </Grid>
+      <Grid item xs={12} className={styles.storyGrid}>
         <Story />
       </Grid>
       <Grid item xs={12}>

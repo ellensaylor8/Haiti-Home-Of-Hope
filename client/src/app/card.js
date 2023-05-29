@@ -11,7 +11,7 @@ const theme = createTheme({
         // Name of the slot
         root: {
           // Some CSS
-          backgroundColor: "rgb(76, 127, 100)",
+          color: "rgb(76, 127, 100)",
         },
       },
     },
@@ -21,10 +21,7 @@ const theme = createTheme({
 export default function NavigationCard(props) {
   return (
     <ThemeProvider theme={theme}>
-      <Card
-        sx={{ maxWidth: 345, color: "white" }}
-        className={styles.navigationCard}
-      >
+      <Card sx={{ maxWidth: 345 }} className={styles.navigationCard}>
         <CardActionArea>
           <Link href={props.link}>
             <CardContent>

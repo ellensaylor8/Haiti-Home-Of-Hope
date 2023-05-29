@@ -1,13 +1,47 @@
+.banner {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  min-height: 90vh;
+}
+.banner::before {
+  content: "";
+  background-image: url("/images/ministry/Family_NoText.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: absolute;
+  top: 0px;
+  right: 0px;
+  bottom: 0px;
+  left: 0px;
+}
+
+.banner::after {
+  content: "";
+  background-color: rgb(76, 127, 100, 0.5);
+  position: absolute;
+  top: 0px;
+  right: 0px;
+  bottom: 0px;
+  left: 0px;
+}
+
 .pageTitle {
-  padding: 2rem;
-  width: 100%;
-  opacity: 0.6;
-  background-color: var(--primary-green);
   color: white;
+  z-index: 200;
+  margin-top: 40vh;
+  font-weight: 100;
+  text-transform: uppercase;
+  letter-spacing: 6px;
+  line-height: 1.1;
 }
 
 .teamTitle {
   color: var(--primary-green);
   padding: 3rem;
   text-align: center;
+}
+
+.storyGrid {
+  border-top: 15px solid white;
 }
