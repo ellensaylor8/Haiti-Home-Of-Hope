@@ -36,12 +36,27 @@
   line-height: 1.1;
 }
 
+.teamGrid {
+  position: relative;
+}
+
+.teamGrid::before {
+  content: "";
+  background-color: var(--primary-green);
+  opacity: 0.3;
+  position: absolute;
+  right: 0px;
+  bottom: 0px;
+  left: 0px;
+  height: 40%;
+}
+
 .teamTitle {
   color: var(--primary-green);
   padding: 3rem;
   text-align: center;
-}
-
-.storyGrid {
-  border-top: 15px solid white;
+  font-weight: 100;
+  text-transform: uppercase;
+  letter-spacing: 6px;
+  line-height: 1.1;
 }

@@ -1,5 +1,6 @@
 .storyContainer {
-  color: var(--primary-green);
+  color: grey;
+  line-height: 1.5;
 }
 
 .storyDescription {
@@ -7,7 +8,8 @@
 }
 
 .imgListGrid {
-  height: 65vh;
+  height: 70vh;
+  border: 15px solid white;
 }
 
 .imgList {
@@ -24,4 +26,12 @@
 
 .imgListItem:hover {
   filter: grayscale(0);
+}
+
+.sectionTitle {
+  color: var(--primary-green);
+  font-weight: 100;
+  text-transform: uppercase;
+  letter-spacing: 6px;
+  line-height: 1.1;
 }

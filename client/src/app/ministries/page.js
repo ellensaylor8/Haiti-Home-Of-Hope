@@ -36,8 +36,12 @@ export default function ministries() {
         </Grid>
         <Grid item xs={12} md={6} id={styles.orphanImage}></Grid>
       </Grid>
-      <Grid container spacing={0} className={styles.gridRowsRight}>
-        <Grid item xs={12} md={6} id={styles.milkClinicImage}></Grid>
+      <Grid
+        container
+        spacing={0}
+        className={styles.gridRowsRight}
+        id={styles.milkClinic}
+      >
         <Grid
           item
           xs={12}
@@ -59,6 +63,7 @@ export default function ministries() {
             checkup to ensure nutritional needs are being met.
           </Typography>
         </Grid>
+        <Grid item xs={12} md={6}></Grid>
       </Grid>
       <Grid container spacing={0} className={styles.gridRowsLeft}>
         <Grid item xs={12} md={6} className={styles.textGrid}>

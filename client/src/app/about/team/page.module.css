@@ -40,4 +40,11 @@
   .modal {
     width: 80%;
   }
+
+  .facebookIcon {
+    fill: black;
+  }
+  .linkedInIcon {
+    fill: black;
+  }
 }

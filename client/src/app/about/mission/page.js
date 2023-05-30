@@ -6,13 +6,13 @@ import Values from "./values";
 export default function Mission() {
   return (
     <Grid container className={styles.missionContainer}>
-      <Grid container item xs={12} md={8} className={styles.missionStatement}>
+      <Grid container item xs={12} md={8} className={styles.missionTxt}>
         <Grid item xs={12}>
-          <Typography variant="h3" className={styles.sectionTitles}>
+          <Typography variant="h4" className={styles.sectionTitle}>
             Our Mission
           </Typography>
           <br />
-          <Typography variant="h6">
+          <Typography variant="body1" className={styles.missionStatement}>
             The mission of Haiti Home of Hope, Inc. is to provide spiritual,
             physical, and emotional well-being for those most in need, through
             sharing the gospel, community outreach, orphan prevention, and

@@ -13,7 +13,9 @@ export default function Story() {
       </Grid>
       <Grid item xs={12} md={6} className={styles.storyDescription}>
         {" "}
-        <Typography variant="h3">Our Story</Typography>
+        <Typography variant="h4" className={styles.sectionTitle}>
+          Our Story
+        </Typography>
         <br />
         <Typography variant="body1">
           Founded January 5th, 2003, Haiti Home of Hope, Inc is a non-profit

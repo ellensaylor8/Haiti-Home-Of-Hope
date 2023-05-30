@@ -17,14 +17,14 @@ export default function Page() {
           Who We Are
         </Typography>
       </Grid>
-      <Grid item xs={12} className={styles.storyGrid}>
+      <Grid item xs={12}>
         <Story />
       </Grid>
       <Grid item xs={12}>
         <Mission />
       </Grid>
-      <Grid item xs={12}>
-        <Typography variant="h3" className={styles.teamTitle}>
+      <Grid item xs={12} className={styles.teamGrid}>
+        <Typography variant="h4" className={styles.teamTitle}>
           Meet Our Team
         </Typography>
         <TeamMembers />;

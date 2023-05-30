@@ -3,8 +3,13 @@
   color: white;
 }
 
-.missionStatement {
+.missionTxt {
   padding: 6rem;
+}
+
+.missionStatement {
+  line-height: 1.5;
+  font-weight: 300;
 }
 
 .missionImage {
@@ -19,7 +24,7 @@
   font-size: 12px;
 }
 
-.sectionTitles {
+.sectionTitle {
   color: white;
   font-weight: 100;
   text-transform: uppercase;
