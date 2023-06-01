@@ -6,7 +6,7 @@ import Values from "./values";
 export default function Mission() {
   return (
     <Grid container className={styles.missionContainer}>
-      <Grid container item xs={12} md={8} className={styles.missionTxt}>
+      <Grid container item xs={12} md={6} className={styles.missionTxt}>
         <Grid item xs={12}>
           <Typography variant="h4" className={styles.sectionTitle}>
             Our Mission
@@ -23,13 +23,7 @@ export default function Mission() {
           <Values />
         </Grid>
       </Grid>
-      <Grid item xs={12} md={4}>
-        <img
-          className={styles.missionImage}
-          src="/images/ministry/Love_the_fatherless.jpg"
-          alt="Picture of staff member holding orphan"
-        ></img>
-      </Grid>
+      <Grid item xs={12} md={6} className={styles.missionImage}></Grid>
     </Grid>
   );
 }

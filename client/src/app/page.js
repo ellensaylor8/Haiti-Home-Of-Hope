@@ -1,7 +1,8 @@
 "use client";
 import styles from "./page.module.css";
-import { Grid, Typography } from "@mui/material";
-import NavigationCard from "./card";
+import Link from "next/link";
+import { Button, Grid, Typography } from "@mui/material";
+import NavigationCard from "./navigationCard";
 
 const cards = [
   {
@@ -34,6 +35,11 @@ export default function Home() {
             out and live and thrive in their community and share the Hope of the
             Gospel.
           </Typography>
+          <Link href="/about" passHref>
+            <Button size="large" variant="outlined" id={styles.learnMoreButton}>
+              Learn More
+            </Button>
+          </Link>
           {/* <Typography variant="overline" align="left" className="verse">
             "A Father of the fatherless and a Judge of the widow is God in His
             holy habitation." -Psalm 68:5

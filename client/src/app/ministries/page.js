@@ -15,14 +15,16 @@ export default function ministries() {
           WHAT WE DO
         </Typography>
       </Grid>
-      <Grid container spacing={0} className={styles.gridRowsLeft}>
-        <Grid item xs={12} md={6} className={styles.textGrid}>
-          <Typography variant="h4" className={styles.sectionTitles}>
+
+      <Grid container spacing={0} className={styles.gridRowsRight}>
+        <Grid item xs={12} md={6} id={styles.orphanCareImage}></Grid>
+        <Grid item xs={12} md={6} className={styles.textGridRight}>
+          <Typography variant="h4" className={styles.sectionTitlesRight}>
             ORPHAN CARE
           </Typography>
           <Typography
             variant="body1"
-            className={styles.ministryDescriptionLeft}
+            className={styles.ministryDescriptionRight}
           >
             Haiti Home of Hope orphanage currently cares for 30+ children full
             time. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
@@ -34,40 +36,50 @@ export default function ministries() {
             culpa qui officia deserunt mollit anim id est laborum.
           </Typography>
         </Grid>
-        <Grid item xs={12} md={6} id={styles.orphanImage}></Grid>
       </Grid>
-      <Grid
-        container
-        spacing={0}
-        className={styles.gridRowsRight}
-        id={styles.milkClinic}
-      >
-        <Grid
-          item
-          xs={12}
-          md={6}
-          className={styles.textGrid}
-          id={styles.milkClinicDescription}
-        >
-          <Typography variant="h4" className={styles.sectionTitles}>
+      <Grid container spacing={0} className={styles.gridRowsLeft}>
+        <Grid item xs={12} md={6} className={styles.textGridLeft}>
+          <Typography variant="h4" className={styles.sectionTitlesLeft}>
             MILK CLINIC
+          </Typography>
+          <Typography
+            variant="body1"
+            className={styles.ministryDescriptionLeft}
+          >
+            {" "}
+            Haiti Home of Hope provides baby formula to infants that are
+            severely malnourished. The majority of the time the infants mothers
+            have either passed away or are not able to nurse them due to their
+            own malnourishment. Children are required to attend a bi-monthly
+            checkup to ensure nutritional needs are being met. Duis aute irure
+            dolor in reprehenderit in voluptate velit esse cillum dolore eu
+            fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+            proident, sunt in culpa qui officia deserunt mollit anim id est
+            laborum.
+          </Typography>
+        </Grid>
+        <Grid item xs={12} md={6} id={styles.milkClinicImage}></Grid>
+      </Grid>
+      <Grid container spacing={0} className={styles.gridRowsRight}>
+        <Grid item xs={12} md={6} id={styles.communityOutreachImage}></Grid>
+        <Grid item xs={12} md={6} className={styles.textGridRight}>
+          <Typography variant="h4" className={styles.sectionTitlesRight}>
+            COMMUNITY OUTREACH
           </Typography>
           <Typography
             variant="body1"
             className={styles.ministryDescriptionRight}
           >
-            Haiti Home of Hope provides baby formula to infants that are
-            severely malnourished. The majority of the time the infants mothers
-            have either passed away or are not able to nurse them due to their
-            own malnourishment. Children are required to attend a bi-monthly
-            checkup to ensure nutritional needs are being met.
+            HHH Field Directors routinely interact with the community. We
+            support several local churches in the area and partner with other
+            ministries to help raise the level of living for those in need while
+            at the same time sharing the love of Christ.
           </Typography>
         </Grid>
-        <Grid item xs={12} md={6}></Grid>
       </Grid>
       <Grid container spacing={0} className={styles.gridRowsLeft}>
-        <Grid item xs={12} md={6} className={styles.textGrid}>
-          <Typography variant="h4" className={styles.sectionTitles}>
+        <Grid item xs={12} md={6} className={styles.textGridLeft}>
+          <Typography variant="h4" className={styles.sectionTitlesLeft}>
             FEEDING CLINIC
           </Typography>
           <Typography
@@ -88,29 +100,6 @@ export default function ministries() {
           </Button>
         </Grid>
         <Grid item xs={12} md={6} id={styles.feedingClinicImage}></Grid>
-      </Grid>
-      <Grid container spacing={0} className={styles.gridRowsRight}>
-        <Grid item xs={12} md={6} id={styles.communityOutreachImage}></Grid>
-        <Grid
-          item
-          xs={12}
-          md={6}
-          className={styles.textGrid}
-          id={styles.communityOutreachDescription}
-        >
-          <Typography variant="h4" className={styles.sectionTitles}>
-            COMMUNITY OUTREACH
-          </Typography>
-          <Typography
-            variant="body1"
-            className={styles.ministryDescriptionRight}
-          >
-            HHH Field Directors routinely interact with the community. We
-            support several local churches in the area and partner with other
-            ministries to help raise the level of living for those in need while
-            at the same time sharing the love of Christ.
-          </Typography>
-        </Grid>
       </Grid>
     </Grid>
   );

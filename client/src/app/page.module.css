@@ -34,6 +34,16 @@
   margin-top: 20vh;
 }
 
+#learnMoreButton {
+  margin-top: 1rem;
+  color: white;
+  border-color: white;
+}
+#learnMoreButton:hover {
+  color: var(--primary-green);
+  background-color: whitesmoke;
+}
+
 .cardsContainer {
   padding: 3rem 6rem;
   background-color: rgb(76, 127, 100, 0.25);
