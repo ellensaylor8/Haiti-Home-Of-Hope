@@ -8,7 +8,15 @@ export default function Mission() {
     <Grid container className={styles.missionContainer}>
       <Grid container item xs={12} md={6} className={styles.missionTxt}>
         <Grid item xs={12}>
-          <Typography variant="h4" className={styles.sectionTitle}>
+          <Typography
+            variant="h4"
+            className={styles.sectionTitle}
+            sx={{
+              fontWeight: "100",
+              letterSpacing: "6px",
+              lineHeight: "1.1",
+            }} // custom styles that will be trumped by MUI styles if assigned using CSS name
+          >
             Our Mission
           </Typography>
           <br />

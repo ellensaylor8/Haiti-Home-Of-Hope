@@ -19,7 +19,11 @@ export default function Values() {
     <Grid container item spacing={1}>
       {values.map((value) => (
         <Grid item xs={12} md={6} key={value.name}>
-          <Paper elevation={15} className={styles.valuePaper}>
+          <Paper
+            elevation={15}
+            className={styles.valuePaper}
+            sx={{ color: "var(--primary-green)" }}
+          >
             {value.icon}
             <Typography variant="h6" component="div">
               {value.name}

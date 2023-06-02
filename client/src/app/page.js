@@ -26,7 +26,12 @@ export default function Home() {
   return (
     <Grid container>
       <Grid container className={styles.headerGrid}>
-        <Grid item xs={10} className={styles.greeting}>
+        <Grid
+          item
+          xs={10}
+          className={styles.greeting}
+          sx={{ marginTop: "20vh" }}
+        >
           <Typography variant="h1" align="left">
             Haiti Home of Hope
           </Typography>

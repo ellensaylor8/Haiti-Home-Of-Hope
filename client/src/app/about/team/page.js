@@ -68,7 +68,9 @@ export default function TeamMembers() {
                         aria-label={`info about ${item.name}`}
                         onClick={() => window.open(item.facebook)}
                       >
-                        <FacebookIcon className={styles.facebookIcon} />
+                        <FacebookIcon
+                          sx={{ fill: mobile ? "black" : "white" }}
+                        />
                       </IconButton>
                     )}
                     {item.linkedIn && (
@@ -77,7 +79,9 @@ export default function TeamMembers() {
                         aria-label={`info about ${item.name}`}
                         onClick={() => window.open(item.linkedIn)}
                       >
-                        <LinkedInIcon className={styles.linkedInIcon} />
+                        <LinkedInIcon
+                          sx={{ fill: mobile ? "black" : "white" }}
+                        />
                       </IconButton>
                     )}
                   </>

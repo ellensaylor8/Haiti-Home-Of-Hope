@@ -29,11 +29,8 @@
 .pageTitle {
   color: white;
   z-index: 200;
-  margin-top: 40vh;
-  font-weight: 100;
   text-transform: uppercase;
-  letter-spacing: 6px;
-  line-height: 1.1;
+  width: 100%;
 }
 
 .teamGrid {
@@ -55,8 +52,5 @@
   color: var(--primary-green);
   padding: 3rem;
   text-align: center;
-  font-weight: 100;
   text-transform: uppercase;
-  letter-spacing: 6px;
-  line-height: 1.1;
 }

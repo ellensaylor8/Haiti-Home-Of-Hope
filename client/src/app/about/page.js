@@ -13,6 +13,12 @@ export default function Page() {
           variant="h4"
           className={styles.pageTitle}
           textAlign="center"
+          sx={{
+            marginTop: "40vh",
+            fontWeight: "100",
+            letterSpacing: "6px",
+            lineHeight: "1.1",
+          }} // custom styles that will be trumped by MUI styles if assigned using CSS name
         >
           Who We Are
         </Typography>
@@ -24,7 +30,15 @@ export default function Page() {
         <Mission />
       </Grid>
       <Grid item xs={12} className={styles.teamGrid}>
-        <Typography variant="h4" className={styles.teamTitle}>
+        <Typography
+          variant="h4"
+          className={styles.teamTitle}
+          sx={{
+            fontWeight: "100",
+            letterSpacing: "6px",
+            lineHeight: "1.1",
+          }} // custom styles that will be trumped by MUI styles if assigned using CSS name
+        >
           Meet Our Team
         </Typography>
         <TeamMembers />;

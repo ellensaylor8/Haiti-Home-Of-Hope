@@ -30,8 +30,5 @@
 
 .sectionTitle {
   color: var(--primary-green);
-  font-weight: 100;
   text-transform: uppercase;
-  letter-spacing: 6px;
-  line-height: 1.1;
 }

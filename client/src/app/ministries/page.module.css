@@ -30,10 +30,7 @@
   color: white;
   z-index: 200;
   margin-top: 40vh;
-  font-weight: 100;
   text-transform: uppercase;
-  letter-spacing: 6px;
-  line-height: 1.1;
 }
 
 .gridRowsLeft {
@@ -76,40 +73,6 @@
   min-height: 75vh;
   padding: 6rem 6rem;
   background-color: white;
-}
-
-.sectionTitlesLeft {
-  color: var(--primary-green);
-  z-index: 200;
-  font-weight: 100;
-  text-transform: uppercase;
-  letter-spacing: 6px;
-  line-height: 1.1;
-  margin-top: 5rem;
-}
-
-.sectionTitlesRight {
-  color: var(--primary-green);
-  z-index: 200;
-  font-weight: 100;
-  text-transform: uppercase;
-  letter-spacing: 6px;
-  line-height: 1.1;
-  margin-top: 3rem;
-}
-
-.ministryDescriptionLeft {
-  margin: 2rem 6rem 0 0;
-  line-height: 2;
-  color: grey;
-  font-weight: 300;
-}
-
-.ministryDescriptionRight {
-  margin: 2rem 0 4rem 0;
-  line-height: 2;
-  font-weight: 300;
-  color: grey;
 }
 
 #milkClinicImage {

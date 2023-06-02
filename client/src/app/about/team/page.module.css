@@ -29,22 +29,8 @@
   padding-left: 0.05rem;
 }
 
-.facebookIcon {
-  fill: white;
-}
-.linkedInIcon {
-  fill: white;
-}
-
 @media only screen and (max-width: 500px) {
   .modal {
     width: 80%;
-  }
-
-  .facebookIcon {
-    fill: black;
-  }
-  .linkedInIcon {
-    fill: black;
   }
 }

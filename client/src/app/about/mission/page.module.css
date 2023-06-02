@@ -1,5 +1,5 @@
 .missionContainer {
-  height: 80vh;
+  min-height: 80vh;
   color: white;
   position: relative;
 }
@@ -21,10 +21,7 @@
 
 .sectionTitle {
   color: var(--primary-green);
-  font-weight: 100;
   text-transform: uppercase;
-  letter-spacing: 6px;
-  line-height: 1.1;
 }
 
 .missionTxt {

@@ -13,7 +13,15 @@ export default function Story() {
       </Grid>
       <Grid item xs={12} md={6} className={styles.storyDescription}>
         {" "}
-        <Typography variant="h4" className={styles.sectionTitle}>
+        <Typography
+          variant="h4"
+          className={styles.sectionTitle}
+          sx={{
+            fontWeight: "100",
+            letterSpacing: "6px",
+            lineHeight: "1.1",
+          }} // custom styles that will be trumped by MUI styles if assigned using CSS name
+        >
           Our Story
         </Typography>
         <br />
