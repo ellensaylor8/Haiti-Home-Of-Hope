@@ -31,7 +31,7 @@
   z-index: 200;
   margin-top: 40vh;
   text-transform: uppercase;
-  width: "100%";
+  width: 100%;
 }
 
 .gridRowsLeft {
@@ -65,14 +65,12 @@
 
 .textGridLeft {
   min-height: 75vh;
-  padding: 3rem 6rem;
   z-index: 4;
   background-color: rgb(211, 224, 216);
 }
 
 .textGridRight {
   min-height: 75vh;
-  padding: 6rem 6rem;
   background-color: white;
 }
 
@@ -132,16 +130,21 @@
   color: white;
   background-color: var(--primary-green);
 }
-@media only screen and (max-width: 400px) {
+@media only screen and (max-width: 500px) {
   .ministryDescription {
     margin: 1rem 1rem;
   }
 
-  .textGrid {
-    padding: 0rem;
+  /* #milkClinicImage {
+    background-image: none;
+  } */
+
+  .gridRowsLeft:after {
+    background-image: none;
+    left: 0;
   }
 
-  #milkClinicImage {
-    background-image: none;
+  #feedingClinicImage {
+    border-left: 0;
   }
 }

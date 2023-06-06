@@ -62,13 +62,18 @@
   border: 2px solid var(--primary-green);
 }
 
-@media only screen and (max-width: 400px) {
+@media only screen and (max-width: 500px) {
   .headerGrid::before {
-    background-size: contain;
+    background-image: url("/images/ministry/lavi.jpg");
     top: 0px;
   }
 
   .greeting {
-    margin-top: 40vh;
+    margin-top: 50vh;
+    font-size: 3rem;
+  }
+
+  .cardsContainer {
+    padding: 3rem;
   }
 }

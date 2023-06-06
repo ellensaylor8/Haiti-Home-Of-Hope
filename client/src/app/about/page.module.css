@@ -54,3 +54,14 @@
   text-align: center;
   text-transform: uppercase;
 }
+
+@media only screen and (max-width: 500px) {
+  .storyDescription {
+    padding: 3rem;
+  }
+
+  .banner::before {
+    background-image: url("/images/ministry/Kiddo_RedShirt.jpg");
+    left: -40px;
+  }
+}

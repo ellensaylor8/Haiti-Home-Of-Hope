@@ -1,6 +1,7 @@
 "use client";
 import styles from "./page.module.css";
 import Link from "next/link";
+import { useState, useEffect } from "react";
 import { Button, Grid, Typography } from "@mui/material";
 import NavigationCard from "./navigationCard";
 
@@ -23,6 +24,19 @@ const cards = [
 ];
 
 export default function Home() {
+  const [mobile, setMobile] = useState(false);
+
+  useEffect(() => {
+    setMobile(window.innerWidth <= 500);
+    window.addEventListener("resize", () => {
+      setMobile(window.innerWidth <= 500);
+    });
+    return () => {
+      window.removeEventListener("resize", () => {
+        setWindowWidth(window.innerWidth);
+      });
+    };
+  }, []);
   return (
     <Grid container>
       <Grid container className={styles.headerGrid}>
@@ -32,10 +46,10 @@ export default function Home() {
           className={styles.greeting}
           sx={{ marginTop: "20vh" }}
         >
-          <Typography variant="h1" align="left">
+          <Typography variant={mobile ? "h4" : "h1"} align="left">
             Haiti Home of Hope
           </Typography>
-          <Typography variant="h5" align="left">
+          <Typography variant={mobile ? "body2" : "h5"} align="left">
             Raising a generation of Godly young men and women, equipped to go
             out and live and thrive in their community and share the Hope of the
             Gospel.

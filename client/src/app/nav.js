@@ -134,7 +134,7 @@ export default function NavBar() {
             ))}
           </Box>
 
-          <Box sx={{ flexGrow: 0 }}>
+          <Box sx={{ flexGrow: 0, display: { xs: "none", md: "flex" } }}>
             <IconButton
               onClick={() => {
                 window.location.href = "mailto:contact@haitihomeofhope.org";
@@ -143,7 +143,7 @@ export default function NavBar() {
               <EmailIcon size="large" />
             </IconButton>
           </Box>
-          <Box sx={{ flexGrow: 0 }}>
+          <Box sx={{ flexGrow: 0, display: { xs: "none", md: "flex" } }}>
             <IconButton
               onClick={() => {
                 window.open("https://www.facebook.com/HaitiHomeOfHope");

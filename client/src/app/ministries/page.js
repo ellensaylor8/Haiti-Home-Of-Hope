@@ -24,7 +24,13 @@ export default function ministries() {
 
       <Grid container spacing={0} className={styles.gridRowsRight}>
         <Grid item xs={12} md={6} id={styles.orphanCareImage}></Grid>
-        <Grid item xs={12} md={6} className={styles.textGridRight}>
+        <Grid
+          item
+          xs={12}
+          md={6}
+          className={styles.textGridRight}
+          sx={{ padding: { xs: "3rem", md: "6rem" } }}
+        >
           <Typography
             variant="h4"
             sx={{
@@ -42,7 +48,7 @@ export default function ministries() {
           <Typography
             variant="body1"
             sx={{
-              margin: "2rem 0 4rem 0",
+              margin: { xs: "2rem 0rem 0 0", md: "2rem 0 4rem 0" },
               lineHeight: "2",
               fontWeight: "300",
               color: "grey",
@@ -60,7 +66,13 @@ export default function ministries() {
         </Grid>
       </Grid>
       <Grid container spacing={0} className={styles.gridRowsLeft}>
-        <Grid item xs={12} md={6} className={styles.textGridLeft}>
+        <Grid
+          item
+          xs={12}
+          md={6}
+          className={styles.textGridLeft}
+          sx={{ padding: { xs: "3rem", md: "3rem 6rem" } }}
+        >
           <Typography
             variant="h4"
             sx={{
@@ -70,7 +82,7 @@ export default function ministries() {
               textTransform: "uppercase",
               letterSpacing: "6px",
               lineHeight: "1.1",
-              marginTop: "5rem",
+              marginTop: { xs: "2rem", md: "5rem" },
             }}
           >
             MILK CLINIC
@@ -78,7 +90,7 @@ export default function ministries() {
           <Typography
             variant="body1"
             sx={{
-              margin: "2rem 6rem 0 0",
+              margin: { xs: "2rem 0rem 0 0", md: "2rem 6rem 0 0" },
               lineHeight: "2",
               fontWeight: "300",
               color: "grey",
@@ -100,7 +112,13 @@ export default function ministries() {
       </Grid>
       <Grid container spacing={0} className={styles.gridRowsRight}>
         <Grid item xs={12} md={6} id={styles.communityOutreachImage}></Grid>
-        <Grid item xs={12} md={6} className={styles.textGridRight}>
+        <Grid
+          item
+          xs={12}
+          md={6}
+          className={styles.textGridRight}
+          sx={{ padding: { xs: "3rem", md: "6rem" } }}
+        >
           <Typography
             variant="h4"
             sx={{
@@ -118,7 +136,7 @@ export default function ministries() {
           <Typography
             variant="body1"
             sx={{
-              margin: "2rem 0 4rem 0",
+              margin: { xs: "2rem 0rem 0 0", md: "2rem 0 4rem 0" },
               lineHeight: "2",
               fontWeight: "300",
               color: "grey",
@@ -132,7 +150,13 @@ export default function ministries() {
         </Grid>
       </Grid>
       <Grid container spacing={0} className={styles.gridRowsLeft}>
-        <Grid item xs={12} md={6} className={styles.textGridLeft}>
+        <Grid
+          item
+          xs={12}
+          md={6}
+          className={styles.textGridLeft}
+          sx={{ padding: { xs: "3rem", md: "3rem 6rem" } }}
+        >
           <Typography
             variant="h4"
             sx={{
@@ -142,7 +166,7 @@ export default function ministries() {
               textTransform: "uppercase",
               letterSpacing: "6px",
               lineHeight: "1.1",
-              marginTop: "5rem",
+              marginTop: { xs: "2rem", md: "5rem" },
             }}
           >
             FEEDING CLINIC
@@ -150,7 +174,7 @@ export default function ministries() {
           <Typography
             variant="body1"
             sx={{
-              margin: "2rem 6rem 0 0",
+              margin: { xs: "2rem 0rem 0 0", md: "2rem 6rem 0 0" },
               lineHeight: "2",
               fontWeight: "300",
               color: "grey",
