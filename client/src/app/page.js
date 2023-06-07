@@ -17,9 +17,10 @@ const cards = [
     link: "/ministries",
   },
   {
-    title: "Connect",
-    description: "Connect with someone from our team.",
-    link: "/connect",
+    title: "Give",
+    description:
+      "Give directly to the different ministries at Haiti Home of Hope, Inc.",
+    link: "/give",
   },
 ];
 

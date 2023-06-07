@@ -18,7 +18,7 @@
 
 .banner::after {
   content: "";
-  background-color: rgb(211, 224, 216, 0.5);
+  background-color: rgba(76, 127, 100, 0.5);
   position: absolute;
   top: 0px;
   right: 0px;
@@ -35,16 +35,13 @@
 }
 
 .gridRowsLeft {
-  min-height: 90vh;
   text-align: left;
   position: relative;
 }
 
 .gridRowsRight {
-  min-height: 90vh;
   border-bottom: 0;
   text-align: left;
-  position: relative;
 }
 
 .gridRowsLeft:after {
@@ -64,14 +61,23 @@
 }
 
 .textGridLeft {
-  min-height: 75vh;
   z-index: 4;
   background-color: rgb(211, 224, 216);
 }
 
 .textGridRight {
-  min-height: 75vh;
   background-color: white;
+}
+
+#orphanCareImage {
+  background-image: url("/images/ministry/Love_the_fatherless.jpg");
+  z-index: -2;
+  width: 100%;
+  height: 100%;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center center;
+  border: 40px solid white;
 }
 
 #milkClinicImage {
@@ -87,18 +93,6 @@
   background-size: cover;
   background-position: center center;
   border-left: 15px solid white;
-}
-
-#orphanCareImage {
-  background-image: url("/images/ministry/Love_the_fatherless.jpg");
-  content: "";
-  z-index: -2;
-  width: 100%;
-  height: 100%;
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-position: center center;
-  border: 40px solid white;
 }
 
 #feedingClinicImage {
@@ -135,8 +129,17 @@
     margin: 1rem 1rem;
   }
 
+  #orphanCareImage {
+    height: 40%;
+    border-bottom: 0;
+  }
+
   #milkClinicImage {
-    background-image: none;
+    height: 40%;
+    border-left: 40px solid rgb(211, 224, 216);
+    border-right: 40px solid rgb(211, 224, 216);
+    border-bottom: 40px solid rgb(211, 224, 216);
+    position: static;
   }
 
   .gridRowsLeft:after {
@@ -145,6 +148,7 @@
   }
 
   #feedingClinicImage {
-    border-left: 0;
+    border: 40px solid white;
+    height: 50vh;
   }
 }

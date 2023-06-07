@@ -21,7 +21,7 @@ import Link from "next/link";
 const pages = [
   { name: "Who We Are", link: "/about" },
   { name: "What We Do", link: "/ministries" },
-  { name: "Connect", link: "/connect" },
+  { name: "Give", link: "/give" },
 ];
 
 export default function NavBar() {

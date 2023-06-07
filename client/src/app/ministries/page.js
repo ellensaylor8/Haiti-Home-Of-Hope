@@ -22,14 +22,22 @@ export default function ministries() {
         </Typography>
       </Grid>
 
-      <Grid container spacing={0} className={styles.gridRowsRight}>
+      <Grid
+        container
+        alignItems="stretch"
+        className={styles.gridRowsRight}
+        sx={{ height: { xs: "100vh", md: "90vh" } }}
+      >
         <Grid item xs={12} md={6} id={styles.orphanCareImage}></Grid>
         <Grid
           item
           xs={12}
           md={6}
           className={styles.textGridRight}
-          sx={{ padding: { xs: "3rem", md: "6rem" } }}
+          sx={{
+            padding: { xs: "0rem 3rem", md: "6rem" },
+            minHeight: { md: "75vh" },
+          }}
         >
           <Typography
             variant="h4"
@@ -65,13 +73,19 @@ export default function ministries() {
           </Typography>
         </Grid>
       </Grid>
-      <Grid container spacing={0} className={styles.gridRowsLeft}>
+      <Grid
+        className={styles.gridRowsLeft}
+        sx={{ height: { xs: "100vh", md: "90vh" } }}
+      >
         <Grid
           item
           xs={12}
           md={6}
           className={styles.textGridLeft}
-          sx={{ padding: { xs: "3rem", md: "3rem 6rem" } }}
+          sx={{
+            padding: { xs: "3rem", md: "3rem 6rem" },
+            minHeight: { md: "75vh" },
+          }}
         >
           <Typography
             variant="h4"
@@ -110,14 +124,17 @@ export default function ministries() {
         </Grid>
         <Grid item xs={12} md={6} id={styles.milkClinicImage}></Grid>
       </Grid>
-      <Grid container spacing={0} className={styles.gridRowsRight}>
-        <Grid item xs={12} md={6} id={styles.communityOutreachImage}></Grid>
+      <Grid className={styles.gridRowsRight}>
+        {/* <Grid item xs={12} md={6} id={styles.communityOutreachImage}></Grid> */}
         <Grid
           item
           xs={12}
           md={6}
           className={styles.textGridRight}
-          sx={{ padding: { xs: "3rem", md: "6rem" } }}
+          sx={{
+            padding: { xs: "3rem", md: "6rem" },
+            minHeight: { md: "75vh" },
+          }}
         >
           <Typography
             variant="h4"
@@ -149,13 +166,16 @@ export default function ministries() {
           </Typography>
         </Grid>
       </Grid>
-      <Grid container spacing={0} className={styles.gridRowsLeft}>
+      <Grid className={styles.gridRowsLeft}>
         <Grid
           item
           xs={12}
           md={6}
           className={styles.textGridLeft}
-          sx={{ padding: { xs: "3rem", md: "3rem 6rem" } }}
+          sx={{
+            padding: { xs: "3rem", md: "3rem 6rem" },
+            minHeight: { md: "75vh" },
+          }}
         >
           <Typography
             variant="h4"
@@ -193,7 +213,7 @@ export default function ministries() {
             Support the Scholarship Program
           </Button>
         </Grid>
-        <Grid item xs={12} md={6} id={styles.feedingClinicImage}></Grid>
+        {/* <Grid item xs={12} md={6} id={styles.feedingClinicImage}></Grid> */}
       </Grid>
     </Grid>
   );
