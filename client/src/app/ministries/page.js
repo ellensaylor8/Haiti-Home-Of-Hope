@@ -25,7 +25,7 @@ export default function ministries() {
       <Grid
         container
         className={styles.gridRowsRight}
-        sx={{ minHeight: { xs: "100vh", md: "75vh" } }}
+        sx={{ minHeight: { xs: "100vh", md: "75vh" }, height: "fit-content" }}
       >
         <Grid item xs={12} md={6} id={styles.orphanCareImage}></Grid>
         <Grid
@@ -46,7 +46,7 @@ export default function ministries() {
               textTransform: "uppercase",
               letterSpacing: "6px",
               lineHeight: "1.1",
-              marginTop: "3rem",
+              marginTop: { xs: "2rem", md: "3rem" },
             }}
           >
             ORPHAN CARE
@@ -75,7 +75,7 @@ export default function ministries() {
         container
         spacing={0}
         className={styles.gridRowsLeft}
-        sx={{ minHeight: { xs: "100vh", md: "75vh" } }}
+        sx={{ minHeight: { xs: "100vh", md: "75vh" }, height: "fit-content" }}
       >
         <Grid
           item
@@ -95,7 +95,7 @@ export default function ministries() {
               textTransform: "uppercase",
               letterSpacing: "6px",
               lineHeight: "1.1",
-              marginTop: { xs: "2rem", md: "5rem" },
+              marginTop: { xs: "2rem", md: "3rem" },
             }}
           >
             MILK CLINIC
@@ -143,7 +143,7 @@ export default function ministries() {
               textTransform: "uppercase",
               letterSpacing: "6px",
               lineHeight: "1.1",
-              marginTop: { md: "3rem" },
+              marginTop: { xs: "2rem", md: "3rem" },
             }}
           >
             COMMUNITY OUTREACH
@@ -183,7 +183,7 @@ export default function ministries() {
               textTransform: "uppercase",
               letterSpacing: "6px",
               lineHeight: "1.1",
-              marginTop: { xs: "2rem", md: "5rem" },
+              marginTop: { xs: "2rem", md: "3rem" },
             }}
           >
             FEEDING CLINIC
