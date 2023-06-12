@@ -13,7 +13,8 @@
   top: -100px;
   right: 0px;
   bottom: 0px;
-  left: -275px;
+  left: 0px;
+  background-position: center center;
 }
 
 .banner::after {

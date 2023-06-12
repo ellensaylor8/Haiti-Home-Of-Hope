@@ -34,7 +34,7 @@ export default function ministries() {
           md={6}
           className={styles.textGridRight}
           sx={{
-            padding: { xs: "0rem 3rem", md: "6rem" },
+            padding: { xs: "3rem", md: "6rem" },
           }}
         >
           <Typography

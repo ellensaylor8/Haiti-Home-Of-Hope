@@ -58,4 +58,8 @@
   .missionTxt {
     padding: 3rem;
   }
+
+  .missionImage {
+    background-image: "none";
+  }
 }
