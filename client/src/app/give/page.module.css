@@ -36,7 +36,7 @@
 
 .generalDonationsContainer {
   position: relative;
-  background-color: rgba(211, 224, 216, 1);
+  border-top: 15px solid rgba(211, 224, 216, 1);
 }
 
 .generalDonationsContainer:after {
@@ -55,7 +55,38 @@
   height: 100%;
 }
 
-.donateButton {
-  border-color: var(--primary-green);
+#donateButton:hover {
   color: var(--primary-green);
+  border: 2px solid var(--primary-green);
+  background-color: white;
+}
+
+#generalDonationsImage {
+  background-image: url("/images/ministry/Vanise.jpg");
+  content: "";
+  z-index: -2;
+  width: 100%;
+  height: "auto";
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center center;
+  border-left: 15px solid white;
+}
+
+#scholarshipDonationImage {
+  background-image: url("/images/ministry/Fricot_2.jpg");
+  content: "";
+  z-index: -2;
+  width: 100%;
+  height: "auto";
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center center;
+  border: 40px solid white;
+}
+
+#scholarshipDonateButton:hover {
+  background-color: var(--primary-green);
+  border-color: var(--primary-green);
+  color: white;
 }
