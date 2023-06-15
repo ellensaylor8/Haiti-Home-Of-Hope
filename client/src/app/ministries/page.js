@@ -60,14 +60,15 @@ export default function ministries() {
               color: "grey",
             }}
           >
-            Haiti Home of Hope orphanage currently cares for 30+ children full
-            time. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
-            do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
-            enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi
-            ut aliquip ex ea commodo consequat. Duis aute irure dolor in
-            reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla
-            pariatur. Excepteur sint occaecat cupidatat non proident, sunt in
-            culpa qui officia deserunt mollit anim id est laborum.
+            One of the primary ministries of Haiti Home of Hope is the operation
+            of an Orphanage. Our mission is to raise and nurture children at
+            until they can step out and be productive Haitian citizens. As they
+            transition out into the community, we pray that the things they
+            learned while at HHH as well as the things they learned from the
+            Lord will guide them to help the people of Haiti to make the right
+            decisions to turn the country from an impoverished nation into a
+            productive one. Haiti Home of Hope orphanage currently cares for 30+
+            children full time.
           </Typography>
         </Grid>
       </Grid>
@@ -75,7 +76,10 @@ export default function ministries() {
         container
         spacing={0}
         className={styles.gridRowsLeft}
-        sx={{ minHeight: { xs: "100vh", md: "75vh" }, height: "fit-content" }}
+        sx={{
+          minHeight: { xs: "100vh", md: "75vh" },
+          height: "fit-content",
+        }}
       >
         <Grid
           item
@@ -114,11 +118,7 @@ export default function ministries() {
             severely malnourished. The majority of the time the infants mothers
             have either passed away or are not able to nurse them due to their
             own malnourishment. Children are required to attend a bi-monthly
-            checkup to ensure nutritional needs are being met. Duis aute irure
-            dolor in reprehenderit in voluptate velit esse cillum dolore eu
-            fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
-            proident, sunt in culpa qui officia deserunt mollit anim id est
-            laborum.
+            checkup to ensure nutritional needs are being met.
           </Typography>
         </Grid>
         <Grid item xs={12} md={6} id={styles.milkClinicImage}></Grid>
@@ -206,8 +206,13 @@ export default function ministries() {
             offered scholarships to attend their local primary school in an
             effort to help them establish consistent education.
           </Typography>
-          <Button id={styles.learnMoreButton}>
-            Support the Scholarship Program
+          <Button
+            id={styles.learnMoreButton}
+            onClick={() =>
+              window.open("http://localhost:3000/give#ScholarshipProgram")
+            }
+          >
+            Learn more about the Scholarship Program
           </Button>
         </Grid>
         <Grid item xs={12} md={6} id={styles.feedingClinicImage}></Grid>
