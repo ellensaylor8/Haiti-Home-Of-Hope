@@ -18,8 +18,7 @@ const cards = [
   },
   {
     title: "Give",
-    description:
-      "Give directly to the different ministries at Haiti Home of Hope, Inc.",
+    description: "Give directly to our ministries.",
     link: "/give",
   },
 ];

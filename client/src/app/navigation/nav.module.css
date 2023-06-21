@@ -1,0 +1,8 @@
+#donateButton {
+  margin-left: 1rem;
+}
+
+#donateButton:hover {
+  color: var(--primary-green);
+  border: 2px solid var(--primary-green);
+}

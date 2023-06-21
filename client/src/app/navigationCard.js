@@ -21,8 +21,11 @@ const theme = createTheme({
 export default function NavigationCard(props) {
   return (
     <ThemeProvider theme={theme}>
-      <Card sx={{ maxWidth: 345 }} className={styles.navigationCard}>
-        <CardActionArea>
+      <Card
+        sx={{ maxWidth: 345, minHeight: 170 }}
+        className={styles.navigationCard}
+      >
+        <CardActionArea sx={{ padding: "25px 16px" }}>
           <Link href={props.link}>
             <CardContent>
               <Typography gutterBottom variant="h5" component="div">
