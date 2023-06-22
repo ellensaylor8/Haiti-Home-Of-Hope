@@ -209,7 +209,9 @@ export default function ministries() {
           <Button
             id={styles.learnMoreButton}
             onClick={() =>
-              window.open("http://localhost:3000/give#ScholarshipProgram")
+              window.open(
+                "https://haiti-home-of-hope.web.app/give#ScholarshipProgram"
+              )
             }
           >
             Learn more about the Scholarship Program
