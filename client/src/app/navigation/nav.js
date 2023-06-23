@@ -51,9 +51,8 @@ export default function NavBar() {
             component="a"
             href="/"
             sx={{
-              mr: 2,
+              mr: { md: 2 },
               display: { xs: "none", md: "flex" },
-              fontFamily: "monospace",
               fontWeight: 700,
               letterSpacing: ".3rem",
               color: "rgb(76, 127, 100)",
@@ -107,10 +106,9 @@ export default function NavBar() {
             component="a"
             href="/"
             sx={{
-              mr: 2,
+              mr: { md: 2 },
               display: { xs: "flex", md: "none" },
               flexGrow: 1,
-              fontFamily: "monospace",
               fontWeight: 700,
               letterSpacing: ".3rem",
               color: "rgb(76, 127, 100)",

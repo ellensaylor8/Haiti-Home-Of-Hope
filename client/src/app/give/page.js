@@ -7,7 +7,11 @@ import ScholarshipProgram from "./scholarshipProgram";
 
 export default function give() {
   return (
-    <Grid container spacing={0}>
+    <Grid
+      container
+      spacing={0}
+      sx={{ borderBottom: "40px solid rgb(76, 127, 100, 0.25)" }}
+    >
       <Grid item xs={12} className={styles.banner}>
         <Typography
           variant="h4"

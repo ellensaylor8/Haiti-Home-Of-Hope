@@ -1,4 +1,5 @@
 "use client";
+
 import styles from "./page.module.css";
 import { Grid, Typography } from "@mui/material";
 import Values from "./values";
@@ -31,7 +32,13 @@ export default function Mission() {
           <Values />
         </Grid>
       </Grid>
-      <Grid item xs={12} md={6} className={styles.missionImage}></Grid>
+      <Grid
+        sx={{ display: { xs: "none", md: "block" } }}
+        item
+        xs={12}
+        md={6}
+        className={styles.missionImage}
+      ></Grid>
     </Grid>
   );
 }
