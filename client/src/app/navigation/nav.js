@@ -143,9 +143,14 @@ export default function NavBar() {
           </Box>
           <Box sx={{ flexGrow: 0 }}>
             <Button
-              variant="outlined"
               id={styles.donateButton}
-              sx={{ color: "white", background: "rgb(76, 127, 100)" }}
+              variant="outlined"
+              sx={{
+                color: "white",
+                background: "rgb(76, 127, 100)",
+                fontSize: ".8rem",
+                padding: "5px 10px",
+              }}
               onClick={() => {
                 window.open(
                   "https://donate.stripe.com/test_dR6g1h44IeGr0F2000"
