@@ -24,6 +24,7 @@ export default function BottomNav() {
           sx={{ maxWidth: "50px" }}
           icon={
             <FacebookIcon
+              className={styles.icon}
               size="large"
               sx={{ color: "grey" }}
               onClick={() => {
@@ -36,6 +37,7 @@ export default function BottomNav() {
           sx={{ maxWidth: "50px" }}
           icon={
             <EmailIcon
+              className={styles.icon}
               size="large"
               sx={{ color: "grey" }}
               onClick={() => {

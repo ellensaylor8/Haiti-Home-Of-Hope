@@ -45,7 +45,7 @@
 
 .cardsContainer {
   padding: 3rem 6rem;
-  background-color: rgb(76, 127, 100, 0.25);
+  background-color: var(--light-green);
   border-top: 25px solid white;
 }
 

@@ -1,5 +1,13 @@
 #fillerDiv {
   width: 100%;
   height: 40px;
-  background-color: rgb(76, 127, 100, 0.25);
+  background-color: var(--light-green);
+}
+
+.icon {
+  transition: all 0.2s ease-in-out;
+}
+
+.icon:hover {
+  transform: scale(1.2);
 }

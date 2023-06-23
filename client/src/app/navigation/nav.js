@@ -51,6 +51,10 @@ export default function NavBar() {
             component="a"
             href="/"
             sx={{
+              "&:hover": {
+                transform: "scale(1.1)",
+              },
+              transition: "all 0.2s ease-in-out",
               mr: { md: 2 },
               display: { xs: "none", md: "flex" },
               fontWeight: 700,
@@ -92,7 +96,11 @@ export default function NavBar() {
               }}
             >
               {pages.map((page) => (
-                <Link href={page.link} key={page.name}>
+                <Link
+                  href={page.link}
+                  key={page.name}
+                  className={styles.navLink}
+                >
                   <MenuItem onClick={handleCloseNavMenu}>
                     <Typography textAlign="center">{page.name}</Typography>
                   </MenuItem>
@@ -106,6 +114,10 @@ export default function NavBar() {
             component="a"
             href="/"
             sx={{
+              "&:hover": {
+                transform: "scale(1.1)",
+              },
+              transition: "all 0.2s ease-in-out",
               mr: { md: 2 },
               display: { xs: "flex", md: "none" },
               flexGrow: 1,
@@ -119,7 +131,7 @@ export default function NavBar() {
           </Typography>
           <Box sx={{ flexGrow: 1, display: { xs: "none", md: "flex" } }}>
             {pages.map((page) => (
-              <Link href={page.link} key={page.name}>
+              <Link href={page.link} key={page.name} className={styles.navLink}>
                 <Button
                   onClick={handleCloseNavMenu}
                   sx={{ my: 2, color: "rgb(76, 127, 100)", display: "block" }}
@@ -131,6 +143,7 @@ export default function NavBar() {
           </Box>
           <Box sx={{ flexGrow: 0 }}>
             <Button
+              variant="outlined"
               id={styles.donateButton}
               sx={{ color: "white", background: "rgb(76, 127, 100)" }}
               onClick={() => {
