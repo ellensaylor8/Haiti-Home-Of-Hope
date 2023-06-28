@@ -1,4 +1,4 @@
-import styles from "./page.module.css";
+import styles from "./scholarshipProgram.module.css";
 import { useEffect, useState } from "react";
 import { Button, Grid, Typography } from "@mui/material";
 import QuiltedImageList from "./imageList";

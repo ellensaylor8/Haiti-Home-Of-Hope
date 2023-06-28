@@ -1,4 +1,4 @@
-import styles from "./page.module.css";
+import styles from "./generalFunds.module.css";
 import { Button, Grid, Typography } from "@mui/material";
 
 export default function GeneralFunds() {

@@ -1,0 +1,48 @@
+.generalDonationsContainer {
+  position: relative;
+  border-top: 15px solid rgba(211, 224, 216, 1);
+}
+
+.generalDonationsContainer:after {
+  content: "";
+  position: absolute;
+  z-index: -1;
+  bottom: 0;
+  left: 2rem;
+  pointer-events: none;
+  background-image: linear-gradient(
+    to left,
+    rgba(239, 244, 252, 0),
+    rgba(211, 224, 216, 1) 50%
+  );
+  width: calc(100% - 2rem);
+  height: 100%;
+}
+
+#donateButton:hover {
+  color: var(--primary-green);
+  border-color: var(--primary-green);
+  background-color: white;
+}
+
+#generalDonationsImage {
+  background-image: url("/images/ministry/Vanise.jpg");
+  content: "";
+  z-index: -2;
+  width: 100%;
+  height: "auto";
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center center;
+}
+
+@media only screen and (max-width: 900px) {
+  #generalDonationsImage {
+    height: 50vh;
+    border: 15px solid white;
+  }
+
+  .generalDonationsContainer:after {
+    background-image: none;
+  }
+}
