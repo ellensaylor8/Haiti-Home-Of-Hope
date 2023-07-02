@@ -38,6 +38,7 @@ export default function TeamMembers() {
       <ImageList cols={mobile ? 1 : 4} gap={16}>
         {itemData.map((item) => (
           <ImageListItem
+            sx={{ overflowY: "hidden" }}
             ref={imgListItemRef}
             className={styles.listItem}
             key={item.img}
