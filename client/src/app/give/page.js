@@ -3,7 +3,7 @@
 import styles from "./page.module.css";
 import { Grid, Typography } from "@mui/material";
 import GeneralFunds from "./generalFunds";
-import ScholarshipProgram from "./scholarshipProgram";
+import ScholarshipProgramCommunity from "./scholarshipProgramCommunity.js";
 
 export default function give() {
   return (
@@ -28,7 +28,7 @@ export default function give() {
         </Typography>
       </Grid>
       <GeneralFunds />
-      <ScholarshipProgram />
+      <ScholarshipProgramCommunity />
     </Grid>
   );
 }

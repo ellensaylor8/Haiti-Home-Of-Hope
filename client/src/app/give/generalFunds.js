@@ -49,7 +49,10 @@ export default function GeneralFunds() {
               Buy basic necessities for children in care at the orphanage
               including food, clothing, bedding etc.
             </li>
-            <li>2nd Example</li>
+            <li>
+              Provide primary education (simliar to K-12 education in the United
+              States) for all orphans under Haiti Home of Hope's care.
+            </li>
             <li>3rd Example</li>
             <li>4th Example</li>
           </ul>

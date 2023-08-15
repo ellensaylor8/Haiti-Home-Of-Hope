@@ -61,14 +61,14 @@ export default function ministries() {
             }}
           >
             One of the primary ministries of Haiti Home of Hope is the operation
-            of an Orphanage. Our mission is to raise and nurture children at
-            until they can step out and be productive Haitian citizens. As they
-            transition out into the community, we pray that the things they
-            learned while at HHH as well as the things they learned from the
-            Lord will guide them to help the people of Haiti to make the right
-            decisions to turn the country from an impoverished nation into a
-            productive one. Haiti Home of Hope orphanage currently cares for 30+
-            children full time.
+            of an orphanage. Our mission is to raise and nurture children until
+            they can step out and be productive Haitian citizens. As the
+            children reach adulthood and transition out into the community, we
+            pray that the things they learned while at HHH as well as the things
+            they learned from the Lord will guide them to help the people of
+            Haiti to make the right decisions to turn the country from an
+            impoverished nation into a productive one. Haiti Home of Hope
+            orphanage currently cares for 30+ children full time.
           </Typography>
         </Grid>
       </Grid>
@@ -113,12 +113,21 @@ export default function ministries() {
               color: "grey",
             }}
           >
-            {" "}
-            Haiti Home of Hope provides baby formula to infants that are
-            severely malnourished. The majority of the time the infants mothers
-            have either passed away or are not able to nurse them due to their
-            own malnourishment. Children are required to attend a bi-monthly
-            checkup to ensure nutritional needs are being met.
+            Frequently mothers of infants in Haiti are so severely malnourished
+            or ill that they are unable to sustain an adequate milk supply to
+            nurse their babies. Haiti Home of Hope provides assistance to these
+            mothers in the form of food, medicine, medical care, etc. with the
+            goal of enabling mothers to nourish their own babies. Each baby
+            typically stays in the program for two years and children and their
+            families are required to attend a bi-monthly checkup to ensure
+            nutritional needs are being met.
+            <br />
+            <br />
+            As of 2023, <b>over 1,004</b> babies have received help from the
+            milk clinic over the life of this ministry. The Haiti Home of Hope
+            orphanage has not brought in any additional orphans for 7 years
+            because of the ability to preserve the family through the help of
+            the milk clinic. Praise the Lord!
           </Typography>
         </Grid>
         <Grid item xs={12} md={6} id={styles.milkClinicImage}></Grid>
@@ -158,9 +167,9 @@ export default function ministries() {
             }}
           >
             HHH Field Directors routinely interact with the community. We
-            support several local churches in the area and partner with other
-            ministries to help raise the level of living for those in need while
-            at the same time sharing the love of Christ.
+            support several local churches, the local police force and partner
+            with other ministries to help raise the level of living for those in
+            need while at the same time sharing the love of Christ.
           </Typography>
         </Grid>
       </Grid>
@@ -198,7 +207,7 @@ export default function ministries() {
             }}
           >
             We provide nutrition assistance to families that have successfully
-            graduated from the Milk Program. Children are required to attend
+            graduated from the Milk Clinic. Children are required to attend
             bi-monthly checkups to ensure nutritional needs are being met. Most
             babies from the milk clinic graduate out, and do not go onto the
             feeding program. The children receiving help from the feeding clinic

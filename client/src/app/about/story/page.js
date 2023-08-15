@@ -32,7 +32,7 @@ export default function Story() {
           Haiti Home of Hope operates an Orphanage, Feeding and Milk Clinics,
           and provides outreach to the community.
           <br /> <br />
-          The ministry sits on 12 acres and consists of a boys dorm, girls dorm,
+          The ministry sits on 4 acres and consists of a boys dorm, girls dorm,
           missions house, library and others.
         </Typography>
       </Grid>

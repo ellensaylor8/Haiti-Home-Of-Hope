@@ -1,4 +1,4 @@
-import styles from "./scholarshipProgram.module.css";
+import styles from "./scholarshipProgramCommunity.module.css";
 import { useEffect, useState } from "react";
 import { Button, Grid, Typography } from "@mui/material";
 import QuiltedImageList from "./imageList";
@@ -37,7 +37,7 @@ export default function ScholarshipProgram() {
           lineHeight: "1.1",
         }}
       >
-        <a id="ScholarshipProgram">HHH Scholarship Program</a>
+        <a id="ScholarshipProgram">Community Scholarship Program</a>
       </Typography>
       <Typography
         variant="body1"
@@ -45,25 +45,21 @@ export default function ScholarshipProgram() {
           marginBottom: "1rem",
         }}
       >
-        The Haiti Home of Hope Scholarship Program provides financial assistance
-        for higher education to HHH graduates who progress out of either the
-        food or milk clinic. Scholarships are based on need, each case is
-        unique.
+        The Community Scholarship Program provides financial assistance for
+        primary education (similar to K-12 education in the United States) for
+        Haitian children in the community who progress out of either the food or
+        milk clinics.
         <br />
         <br />
-        HHH is consistently seeking individuals who would be interested in
-        sponsoring a child. It costs approximately $2,500/year for tuition,
-        lodging, books and fees to attend a university in Haiti. The application
-        process is similar to that in the US; upon graduating they have to take
-        a national exam, similar to the SAT. If they pass that exam they then
-        have to pass an entrance exam into the university they choose to attend.
-        Once they successfully pass these exams it is up to us to find funding
-        to help them with their education.
+        It costs approximately $?/year per child for tuition, uniforms,
+        supplies, books and supplies to attend a primary school in Haiti. Haiti
+        Home of Hope currently supports over 50 youth with full scholarships.
         <br />
         <br />
-        Haiti Home of Hope currently supports over 50 youth with full
-        scholarships. The scholarship program has been in effect for over 15
-        years.
+        Children receiving funding through this program are required to check-in
+        with our Haiti Home of Hope Head of Operations twice a year with their
+        school uniform and grade-card. The scholarship program has been in
+        effect for over 15 years!
         <br />
         <br />
         We appreciate any amount you feel led to give!
