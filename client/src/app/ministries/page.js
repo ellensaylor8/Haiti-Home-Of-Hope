@@ -81,6 +81,7 @@ export default function ministries() {
           height: "fit-content",
         }}
       >
+        <a id="MilkClinic"></a>
         <Grid
           item
           xs={12}
@@ -113,21 +114,20 @@ export default function ministries() {
               color: "grey",
             }}
           >
-            Frequently mothers of infants in Haiti are so severely malnourished
+            Mothers of infants in Haiti are sometimes so severely malnourished
             or ill that they are unable to sustain an adequate milk supply to
             nurse their babies. Haiti Home of Hope provides assistance to these
             mothers in the form of food, medicine, medical care, etc. with the
-            goal of enabling mothers to nourish their own babies. Each baby
-            typically stays in the program for two years and children and their
-            families are required to attend a bi-monthly checkup to ensure
-            nutritional needs are being met.
+            goal of enabling mothers to nurse. Each baby typically stays in the
+            program for two years and children and their families are required
+            to attend a bi-monthly checkup to ensure nutritional needs are being
+            met.
             <br />
             <br />
-            As of 2023, <b>over 1,004</b> babies have received help from the
-            milk clinic over the life of this ministry. The Haiti Home of Hope
-            orphanage has not brought in any additional orphans for 7 years
-            because of the ability to preserve the family through the help of
-            the milk clinic. Praise the Lord!
+            As of 2023, over <b>1,000</b> babies have received help from the
+            Milk Clinic. The Haiti Home of Hope orphanage has not welcomed any
+            additional orphans for 7 years because of the ability to preserve
+            the family through the help of the Milk Clinic. Praise the Lord!
           </Typography>
         </Grid>
         <Grid item xs={12} md={6} id={styles.milkClinicImage}></Grid>
@@ -174,6 +174,7 @@ export default function ministries() {
         </Grid>
       </Grid>
       <Grid container spacing={0} className={styles.gridRowsLeft}>
+        <a id="FeedingClinic"></a>
         <Grid
           item
           xs={12}
@@ -209,7 +210,7 @@ export default function ministries() {
             We provide nutrition assistance to families that have successfully
             graduated from the Milk Clinic. Children are required to attend
             bi-monthly checkups to ensure nutritional needs are being met. Most
-            babies from the milk clinic graduate out, and do not go onto the
+            babies from the Milk Clinic graduate out, and do not go onto the
             feeding program. The children receiving help from the feeding clinic
             range in age from 1 to 10 years old. Children of school age are also
             offered scholarships to attend their local primary school in an

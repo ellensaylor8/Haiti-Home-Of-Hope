@@ -10,6 +10,14 @@
   border: 15px solid white;
 }
 
+.clinicLink {
+  color: var(--primary-green);
+}
+
+.clinicLink:hover {
+  color: grey;
+}
+
 #scholarshipDonateButton:hover {
   background-color: white;
   border-color: var(--primary-green);

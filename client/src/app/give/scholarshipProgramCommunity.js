@@ -25,6 +25,15 @@ export default function ScholarshipProgram() {
 
   const ScholarshipProgramDescription = (
     <Grid item xs={12} md={6} sx={{ padding: "3rem" }}>
+      <a
+        id="ScholarshipProgram"
+        style={{
+          display: "block",
+          position: "relative",
+          top: "-100px",
+          visibility: "hidden",
+        }}
+      ></a>
       <Typography
         variant="h4"
         sx={{
@@ -37,7 +46,7 @@ export default function ScholarshipProgram() {
           lineHeight: "1.1",
         }}
       >
-        <a id="ScholarshipProgram">Community Scholarship Program</a>
+        Scholarship Program
       </Typography>
       <Typography
         variant="body1"
@@ -45,21 +54,44 @@ export default function ScholarshipProgram() {
           marginBottom: "1rem",
         }}
       >
-        The Community Scholarship Program provides financial assistance for
-        primary education (similar to K-12 education in the United States) for
-        Haitian children in the community who progress out of either the food or
-        milk clinics.
+        The Scholarship Program provides financial assistance for primary
+        education (similar to K-12 education in the United States) for Haitian
+        children in the community who graduate out of either the Haiti Home of
+        Hope{" "}
+        <a
+          href="https://haiti-home-of-hope.web.app/ministries#FeedingClinic"
+          target="_blank"
+          class={styles.clinicLink}
+        >
+          Feeding
+        </a>{" "}
+        or{" "}
+        <a
+          href="https://haiti-home-of-hope.web.app/ministries#MilkClinic"
+          target="_blank"
+          class={styles.clinicLink}
+        >
+          Milk Clinic
+        </a>
+        . Receiving a scholarship is based on need and each case is unique.
         <br />
         <br />
-        It costs approximately $?/year per child for tuition, uniforms,
-        supplies, books and supplies to attend a primary school in Haiti. Haiti
-        Home of Hope currently supports over 50 youth with full scholarships.
+        It costs roughly $130 USD per year, per child for tuition, uniforms,
+        books and supplies to attend a primary school in Haiti. Haiti Home of
+        Hope currently supports 50 youth with full scholarships. The scholarship
+        program has been in effect for over 15 years!
         <br />
         <br />
-        Children receiving funding through this program are required to check-in
-        with our Haiti Home of Hope Head of Operations twice a year with their
-        school uniform and grade-card. The scholarship program has been in
-        effect for over 15 years!
+        Not only does the Scholarship Program provide these children with an
+        education, it also gives them greater security in their families as
+        Haitian children pursuing an education are often of greater value to
+        their parents. Educated Haitians have a better chance of securing a job
+        and subsequently an income for their families.
+        <br />
+        <br />
+        Children receiving funding through this program are required to check in
+        with Haiti Home of Hope's Field Operators twice a year with their school
+        uniform and grade card.
         <br />
         <br />
         We appreciate any amount you feel led to give!
