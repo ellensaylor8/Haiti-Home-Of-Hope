@@ -44,7 +44,7 @@ export default function Home() {
           item
           xs={10}
           className={styles.greeting}
-          sx={{ marginTop: { xs: "50vh", md: "20vh" } }}
+          sx={{ marginTop: "20vh" }}
         >
           <Typography variant={mobile ? "h4" : "h1"} align="left">
             Haiti Home of Hope

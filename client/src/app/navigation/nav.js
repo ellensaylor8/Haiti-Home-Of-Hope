@@ -1,6 +1,6 @@
 "use client";
 import styles from "./nav.module.css";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import {
   AppBar,
   Box,
@@ -33,12 +33,28 @@ export default function NavBar() {
     setAnchorElNav(null);
   };
 
+  const [colorChange, setColorchange] = useState(false);
+  console.log(colorChange);
+  const changeNavbarColor = () => {
+    if (window.scrollY >= 80) {
+      setColorchange(true);
+    } else {
+      setColorchange(false);
+    }
+  };
+  useEffect(() => {
+    window.addEventListener("scroll", changeNavbarColor);
+  });
+
   return (
     <AppBar
       position="fixed"
       sx={{
-        background: "white",
-        color: "rgb(76, 127, 100)",
+        background: colorChange ? "white" : "transparent",
+        color: colorChange ? "var(--primary-green)" : "white",
+        boxShadow: colorChange
+          ? "0px 2px 4px -1px rgba(0,0,0,0.2), 0px 4px 5px 0px rgba(0,0,0,0.14), 0px 1px 10px 0px rgba(0,0,0,0.12);"
+          : "none",
         position: "sticky",
         zIndex: 300,
       }}
@@ -46,7 +62,7 @@ export default function NavBar() {
       <Container maxWidth="xl">
         <Toolbar disableGutters>
           <Typography
-            variant="h6"
+            variant="h5"
             noWrap
             component="a"
             href="/"
@@ -59,7 +75,7 @@ export default function NavBar() {
               display: { xs: "none", md: "flex" },
               fontWeight: 700,
               letterSpacing: ".3rem",
-              color: "rgb(76, 127, 100)",
+              color: colorChange ? "var(--primary-green)" : "white",
               textDecoration: "none",
             }}
           >
@@ -73,9 +89,11 @@ export default function NavBar() {
               aria-controls="menu-appbar"
               aria-haspopup="true"
               onClick={handleOpenNavMenu}
-              color="rgb(76, 127, 100)"
+              color={colorChange ? "var(--primary-green)" : "white"}
             >
-              <MenuIcon />
+              <MenuIcon
+                sx={{ color: colorChange ? "var(--primary-green)" : "white" }}
+              />
             </IconButton>
             <Menu
               id="menu-appbar"
@@ -96,12 +114,11 @@ export default function NavBar() {
               }}
             >
               {pages.map((page) => (
-                <Link
-                  href={page.link}
-                  key={page.name}
-                  className={styles.navLink}
-                >
-                  <MenuItem onClick={handleCloseNavMenu}>
+                <Link href={page.link} key={page.name}>
+                  <MenuItem
+                    onClick={handleCloseNavMenu}
+                    className={styles.menuButton}
+                  >
                     <Typography textAlign="center">{page.name}</Typography>
                   </MenuItem>
                 </Link>
@@ -123,7 +140,7 @@ export default function NavBar() {
               flexGrow: 1,
               fontWeight: 700,
               letterSpacing: ".3rem",
-              color: "rgb(76, 127, 100)",
+              color: colorChange ? "var(--primary-green)" : "white",
               textDecoration: "none",
             }}
           >
@@ -131,10 +148,15 @@ export default function NavBar() {
           </Typography>
           <Box sx={{ flexGrow: 1, display: { xs: "none", md: "flex" } }}>
             {pages.map((page) => (
-              <Link href={page.link} key={page.name} className={styles.navLink}>
+              <Link href={page.link} key={page.name}>
                 <Button
+                  className={styles.menuButton}
                   onClick={handleCloseNavMenu}
-                  sx={{ my: 2, color: "rgb(76, 127, 100)", display: "block" }}
+                  sx={{
+                    my: 2,
+                    color: colorChange ? "var(--primary-green)" : "white",
+                    display: "block",
+                  }}
                 >
                   {page.name}
                 </Button>
@@ -147,7 +169,8 @@ export default function NavBar() {
               variant="outlined"
               sx={{
                 color: "white",
-                background: "rgb(76, 127, 100)",
+                background: colorChange ? "var(--primary-green)" : "none",
+                borderColor: colorChange ? "var(--primary-green)" : "white",
                 fontSize: ".8rem",
                 padding: "5px 10px",
               }}

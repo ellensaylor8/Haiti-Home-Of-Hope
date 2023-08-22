@@ -8,7 +8,7 @@ export default function ministries() {
     <Grid container spacing={0}>
       <Grid item xs={12} className={styles.banner}>
         <Typography
-          variant="h4"
+          variant="h3"
           className={styles.pageTitle}
           textAlign="center"
           sx={{
@@ -100,7 +100,7 @@ export default function ministries() {
               textTransform: "uppercase",
               letterSpacing: "6px",
               lineHeight: "1.1",
-              marginTop: { xs: "2rem", md: "3rem" },
+              marginTop: { md: "2rem" },
             }}
           >
             MILK CLINIC
@@ -114,20 +114,25 @@ export default function ministries() {
               color: "grey",
             }}
           >
-            Mothers of infants in Haiti are sometimes so severely malnourished
-            or ill that they are unable to sustain an adequate milk supply to
-            nurse their babies. Haiti Home of Hope provides assistance to these
-            mothers in the form of food, medicine, medical care, etc. with the
-            goal of enabling mothers to nurse. Each baby typically stays in the
-            program for two years and children and their families are required
-            to attend a bi-monthly checkup to ensure nutritional needs are being
-            met.
+            The Milk Clinic is a ministry almost exclusively for Haitian babies
+            with no living mother. Haiti Home of Hope provides powder formula
+            for these babies who range from newborn to 18 months of age and are
+            typically being cared for by their aunts and grandmothers.
+            <br />
+            <br />
+            To enter the program, families are required to bring the baby, along
+            with the baby's birth certificate and their deceased mother's death
+            certificate. Once families enter the program, babies and their
+            caregivers are required to attend a bi-monthly checkup to ensure
+            nutritional needs are being met. Each baby typically stays in the
+            program for two years.
             <br />
             <br />
             As of 2023, over <b>1,000</b> babies have received help from the
             Milk Clinic. The Haiti Home of Hope orphanage has not welcomed any
-            additional orphans for 7 years because of the ability to preserve
-            the family through the help of the Milk Clinic. Praise the Lord!
+            additional orphans for 7 years due in part to the ability to
+            preserve the family through the help of the Milk Clinic. Praise the
+            Lord!
           </Typography>
         </Grid>
         <Grid item xs={12} md={6} id={styles.milkClinicImage}></Grid>
@@ -193,10 +198,10 @@ export default function ministries() {
               textTransform: "uppercase",
               letterSpacing: "6px",
               lineHeight: "1.1",
-              marginTop: { xs: "2rem", md: "3rem" },
+              marginTop: { md: "2rem" },
             }}
           >
-            FEEDING CLINIC
+            FEEDING PROGRAM
           </Typography>
           <Typography
             variant="body1"
@@ -207,14 +212,17 @@ export default function ministries() {
               color: "grey",
             }}
           >
-            We provide nutrition assistance to families that have successfully
-            graduated from the Milk Clinic. Children are required to attend
-            bi-monthly checkups to ensure nutritional needs are being met. Most
-            babies from the Milk Clinic graduate out, and do not go onto the
-            feeding program. The children receiving help from the feeding clinic
-            range in age from 1 to 10 years old. Children of school age are also
-            offered scholarships to attend their local primary school in an
-            effort to help them establish consistent education.
+            The Feeding Program is a ministry for malnourished children from 1
+            to 10 years of age and periodically for malnourished nursing
+            mothers. Haiti Home of Hope provides food and supplements to these
+            children as well as malnourished mothers to enable them to nurse
+            their babies. Children are required to attend bi-monthly checkups to
+            ensure nutritional needs are being met.
+            <br />
+            <br />
+            Children of school age in the Feeding Program are also offered
+            scholarships to attend their local primary school in an effort to
+            help them establish consistent education.
           </Typography>
           <Button
             id={styles.learnMoreButton}

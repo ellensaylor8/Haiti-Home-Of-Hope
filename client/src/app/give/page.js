@@ -14,11 +14,11 @@ export default function give() {
     >
       <Grid item xs={12} className={styles.banner}>
         <Typography
-          variant="h4"
+          variant="h3"
           className={styles.pageTitle}
           textAlign="center"
           sx={{
-            marginTop: "40vh",
+            marginTop: "20vh",
             fontWeight: "100",
             letterSpacing: "6px",
             lineHeight: "1.1",

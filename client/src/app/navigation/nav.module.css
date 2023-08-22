@@ -1,8 +1,8 @@
 #donateButton:hover {
-  color: var(--primary-green);
-  border-color: var(--primary-green);
+  background-color: rgb(245, 245, 245, 0.4);
+  border-color: white;
 }
 
-.navLink:hover {
-  background-color: var(--light-green);
+.menuButton:hover {
+  border: 1px solid white;
 }
