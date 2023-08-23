@@ -15,6 +15,7 @@ import {
 
 import MenuIcon from "@mui/icons-material/Menu";
 import Link from "next/link";
+import { usePathname } from "next/navigation";
 
 const pages = [
   { name: "Who We Are", link: "/about" },
@@ -23,6 +24,7 @@ const pages = [
 ];
 
 export default function NavBar() {
+  const pathname = usePathname();
   const [anchorElNav, setAnchorElNav] = useState(null);
 
   const handleOpenNavMenu = (event) => {
@@ -34,7 +36,6 @@ export default function NavBar() {
   };
 
   const [colorChange, setColorchange] = useState(false);
-  console.log(colorChange);
   const changeNavbarColor = () => {
     if (window.scrollY >= 80) {
       setColorchange(true);
@@ -113,16 +114,23 @@ export default function NavBar() {
                 display: { xs: "block", md: "none" },
               }}
             >
-              {pages.map((page) => (
-                <Link href={page.link} key={page.name}>
-                  <MenuItem
-                    onClick={handleCloseNavMenu}
-                    className={styles.menuButton}
+              {pages.map((page) => {
+                const isActive = pathname === page.link;
+                return (
+                  <Link
+                    href={page.link}
+                    key={page.name}
+                    className={isActive ? styles.active : ""}
                   >
-                    <Typography textAlign="center">{page.name}</Typography>
-                  </MenuItem>
-                </Link>
-              ))}
+                    <MenuItem
+                      onClick={handleCloseNavMenu}
+                      className={styles.menuButton}
+                    >
+                      <Typography textAlign="center">{page.name}</Typography>
+                    </MenuItem>
+                  </Link>
+                );
+              })}
             </Menu>
           </Box>
           <Typography
@@ -147,21 +155,28 @@ export default function NavBar() {
             HHH
           </Typography>
           <Box sx={{ flexGrow: 1, display: { xs: "none", md: "flex" } }}>
-            {pages.map((page) => (
-              <Link href={page.link} key={page.name}>
-                <Button
-                  className={styles.menuButton}
-                  onClick={handleCloseNavMenu}
-                  sx={{
-                    my: 2,
-                    color: colorChange ? "var(--primary-green)" : "white",
-                    display: "block",
-                  }}
+            {pages.map((page) => {
+              const isActive = pathname === page.link;
+              return (
+                <Link
+                  href={page.link}
+                  key={page.name}
+                  className={isActive ? styles.active : ""}
                 >
-                  {page.name}
-                </Button>
-              </Link>
-            ))}
+                  <Button
+                    className={styles.menuButton}
+                    onClick={handleCloseNavMenu}
+                    sx={{
+                      my: 2,
+                      color: colorChange ? "var(--primary-green)" : "white",
+                      display: "block",
+                    }}
+                  >
+                    {page.name}
+                  </Button>
+                </Link>
+              );
+            })}
           </Box>
           <Box sx={{ flexGrow: 0 }}>
             <Button

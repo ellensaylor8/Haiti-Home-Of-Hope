@@ -61,7 +61,7 @@ export default function ScholarshipProgram() {
         <a
           href="https://haiti-home-of-hope.web.app/ministries#FeedingClinic"
           target="_blank"
-          class={styles.clinicLink}
+          className={styles.clinicLink}
         >
           Feeding
         </a>{" "}
@@ -69,7 +69,7 @@ export default function ScholarshipProgram() {
         <a
           href="https://haiti-home-of-hope.web.app/ministries#MilkClinic"
           target="_blank"
-          class={styles.clinicLink}
+          className={styles.clinicLink}
         >
           Milk Clinic
         </a>
