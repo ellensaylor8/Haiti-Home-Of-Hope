@@ -12,7 +12,7 @@ export default function ministries() {
           className={styles.pageTitle}
           textAlign="center"
           sx={{
-            marginTop: "40vh",
+            marginTop: "20vh",
             fontWeight: "100",
             letterSpacing: "6px",
             lineHeight: "1.1",
