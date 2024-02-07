@@ -10,6 +10,7 @@ export default function RootLayout({ children }) {
         <NavBar />
 
         {children}
+
         <BottomNav />
       </body>
     </html>

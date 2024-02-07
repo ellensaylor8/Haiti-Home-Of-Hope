@@ -1,18 +1,17 @@
 "use client";
 import styles from "./nav.module.css";
 import { useEffect, useState } from "react";
-import {
-  AppBar,
-  Box,
-  Toolbar,
-  IconButton,
-  Typography,
-  Menu,
-  Container,
-  Button,
-  MenuItem,
-} from "@mui/material";
-
+import AppBar from "@mui/material/AppBar";
+import Box from "@mui/material/Box";
+import Dialog from "@mui/material/Dialog";
+import DialogTitle from "@mui/material/DialogTitle";
+import Toolbar from "@mui/material/Toolbar";
+import IconButton from "@mui/material/IconButton";
+import Typography from "@mui/material/Typography";
+import Menu from "@mui/material/Menu";
+import Container from "@mui/material/Container";
+import Button from "@mui/material/Button";
+import MenuItem from "@mui/material/MenuItem";
 import MenuIcon from "@mui/icons-material/Menu";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
@@ -42,6 +41,17 @@ export default function NavBar() {
     } else {
       setColorchange(false);
     }
+  };
+
+  const [open, setOpen] = useState(false);
+
+  const handleClickOpen = () => {
+    setOpen(true);
+  };
+
+  const handleClose = (value) => {
+    setOpen(false);
+    setSelectedValue(value);
   };
   useEffect(() => {
     window.addEventListener("scroll", changeNavbarColor);
@@ -179,6 +189,7 @@ export default function NavBar() {
             })}
           </Box>
           <Box sx={{ flexGrow: 0 }}>
+            {/* <PayPalButton /> */}
             <Button
               id={styles.donateButton}
               variant="outlined"
@@ -191,13 +202,20 @@ export default function NavBar() {
               }}
               onClick={() => {
                 window.open(
-                  "https://donate.stripe.com/test_dR6g1h44IeGr0F2000"
+                  "https://www.paypal.com/US/fundraiser/charity/3807057"
                 );
               }}
             >
               Donate
             </Button>
           </Box>
+          <Dialog onClose={handleClose} open={open}>
+            <DialogTitle>Set backup account</DialogTitle>
+            <iframe
+              target="_blank"
+              src="https://www.paypal.com/donate/?hosted_button_id=9SPB788Q6KC2W"
+            ></iframe>
+          </Dialog>
         </Toolbar>
       </Container>
     </AppBar>

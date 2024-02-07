@@ -1,60 +1,32 @@
 "use client";
-import { useEffect } from "react";
-import { loadStripe } from "@stripe/stripe-js";
+import { Alert, Grid } from "@mui/material";
+import { useState } from "react";
+// import BasicTabs from "./tabs";
+import VerticalLinearStepper from "./verticalStepper";
 
-// Make sure to call `loadStripe` outside of a component’s render to avoid
-// recreating the `Stripe` object on every render.
-const stripePromise = loadStripe(
-  process.env.NEXT_PUBLIC_STRIPE_PUBLISHABLE_KEY
-);
-
-export default function PreviewPage() {
-  useEffect(() => {
-    // Check to see if this is a redirect back from Checkout
-    const query = new URLSearchParams(window.location.search);
-    if (query.get("success")) {
-      console.log("Order placed! You will receive an email confirmation.");
-    }
-
-    if (query.get("canceled")) {
-      console.log(
-        "Order canceled -- continue to shop around and checkout when you’re ready."
-      );
-    }
-  }, []);
+export default async function Page() {
+  const [showAlert, setShowAlert] = useState(true);
 
   return (
-    <form action="/donate/api" method="POST">
-      <section>
-        <button type="submit">Donate</button>
-      </section>
-      <style jsx>
-        {`
-          section {
-            background: #ffffff;
-            display: flex;
-            flex-direction: column;
-            width: 400px;
-            height: 112px;
-            border-radius: 6px;
-            justify-content: space-between;
-          }
-          button {
-            height: 36px;
-            background: #556cd6;
-            border-radius: 4px;
-            color: white;
-            border: 0;
-            font-weight: 600;
-            cursor: pointer;
-            transition: all 0.2s ease;
-            box-shadow: 0px 4px 5.5px 0px rgba(0, 0, 0, 0.07);
-          }
-          button:hover {
-            opacity: 0.8;
-          }
-        `}
-      </style>
-    </form>
+    <Grid
+      container
+      sx={{ minHeight: { xs: "100vh", md: "75vh" }, height: "fit-content" }}
+    >
+      <Grid
+        item
+        xs={12}
+        md={6}
+        sx={{ padding: "3rem", backgroundColor: "rgba(211, 224, 216, 1)" }}
+      >
+        <VerticalLinearStepper />
+
+        {showAlert && (
+          <Alert severity="error" onClose={setShowAlert(false)}>
+            Oops, there was an error processing this request. Please contact
+            esaylor@haitihomeofhope.org if the problem persists.
+          </Alert>
+        )}
+      </Grid>
+    </Grid>
   );
 }
