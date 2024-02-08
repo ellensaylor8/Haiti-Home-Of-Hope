@@ -14,12 +14,18 @@ import InputLabel from "@mui/material/InputLabel";
 import MenuItem from "@mui/material/MenuItem";
 import FormControl from "@mui/material/FormControl";
 import Select from "@mui/material/Select";
+import OutlinedInput from "@mui/material/OutlinedInput";
+import InputAdornment from "@mui/material/InputAdornment";
 import { createPaymentLink, createPrice } from "@/app/actions";
 
 export default function VerticalLinearStepper() {
   async function createCustomPaymentLink() {
     try {
-      const price = await createPrice(donationAmount, donationFrequency);
+      let donation =
+        donationAmount === "custom" ? customAmount : donationAmount;
+
+      const price = await createPrice(donation, donationFrequency);
+
       const paymentLink = await createPaymentLink(price.id);
       if (paymentLink) {
         window.open(paymentLink.url);
@@ -28,6 +34,24 @@ export default function VerticalLinearStepper() {
       console.error(err);
     }
     return;
+  }
+
+  // continue controls
+  function continueDisabled(index) {
+    if (index === steps.length - 1) {
+      return false;
+    } else {
+      if (index === 0) {
+        return (
+          !donationAmount ||
+          (donationAmount === "custom" && Number(customAmount) === 0)
+        );
+      } else if (index === 1) {
+        return !donationFrequency;
+      } else if (index === 2) {
+        return !designation;
+      }
+    }
   }
 
   // stepper controls
@@ -46,11 +70,24 @@ export default function VerticalLinearStepper() {
   };
 
   // donation amount controls
-  const [donationAmount, setDonationAmount] = useState();
-  const [donationFrequency, setDonationFrequency] = useState("monthly");
+  const [donationAmount, setDonationAmount] = useState("10");
+  const [donationFrequency, setDonationFrequency] = useState("month");
+  const [customSelection, setCustomSelection] = useState(false);
+  const [customAmount, setCustomAmount] = useState("");
 
   const handleDonationAmountChange = (event, newDonationAmount) => {
+    if (newDonationAmount === "custom") {
+      setCustomSelection(true);
+      setDonationAmount(0);
+    } else {
+      setCustomSelection(false);
+      setDonationAmount(newDonationAmount);
+    }
     setDonationAmount(newDonationAmount);
+  };
+
+  const handleCustomAmountChange = (event) => {
+    setCustomAmount(event.target.value);
   };
 
   const handleDonationFrequencyChange = (event, newDonationFrequency) => {
@@ -66,23 +103,41 @@ export default function VerticalLinearStepper() {
 
   const steps = [
     {
-      label: "Donation Amount",
+      label: `Donation Amount: $${donationAmount}`,
       description: "Please select a donation amount",
       content: (
-        <ToggleButtonGroup
-          exclusive
-          value={donationAmount}
-          onChange={handleDonationAmountChange}
-        >
-          <ToggleButton value="10">$10</ToggleButton>
-          <ToggleButton value="30">$30</ToggleButton>
-          <ToggleButton value="50">$50</ToggleButton>
-          <ToggleButton value="0">Custom</ToggleButton>
-        </ToggleButtonGroup>
+        <>
+          <ToggleButtonGroup
+            exclusive
+            value={donationAmount}
+            onChange={handleDonationAmountChange}
+          >
+            <ToggleButton value="10">$10</ToggleButton>
+            <ToggleButton value="30">$30</ToggleButton>
+            <ToggleButton value="50">$50</ToggleButton>
+            <ToggleButton value="custom">Custom</ToggleButton>
+          </ToggleButtonGroup>
+          {customSelection && (
+            <FormControl fullWidth sx={{ m: 1 }}>
+              <InputLabel htmlFor="outlined-adornment-amount">
+                Amount
+              </InputLabel>
+              <OutlinedInput
+                id="outlined-adornment-amount"
+                startAdornment={
+                  <InputAdornment position="start">$</InputAdornment>
+                }
+                label="Amount"
+                value={customAmount}
+                onChange={handleCustomAmountChange}
+              />
+            </FormControl>
+          )}
+        </>
       ),
     },
     {
-      label: "Donation Frequency",
+      label: `Donation Frequency: ${donationFrequency}`,
       description: "Please select your donation frequency",
       content: (
         <ToggleButtonGroup
@@ -98,7 +153,7 @@ export default function VerticalLinearStepper() {
       ),
     },
     {
-      label: "Donation Designation",
+      label: `Donation Designation: ${designation}`,
       description: `Which ministry would you like your gift to fund?`,
       content: (
         <FormControl fullWidth>
@@ -141,12 +196,15 @@ export default function VerticalLinearStepper() {
               {step.content}
               <Box sx={{ mb: 2 }}>
                 <div>
+                  <br />
+                  {index === steps.length - 1 && (
+                    <Typography variant="overline">
+                      Donate <b>${donationAmount}</b> every{" "}
+                      <b>{donationFrequency}</b> to <b>{designation}</b>
+                    </Typography>
+                  )}
                   <Button
-                    disabled={
-                      index === steps.length - 1
-                        ? !donationAmount || !donationFrequency || !designation
-                        : false
-                    }
+                    disabled={continueDisabled(index)}
                     variant="contained"
                     onClick={
                       index === steps.length - 1

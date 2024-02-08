@@ -6,6 +6,7 @@ const stripe = require("stripe")(
 );
 
 const recurrindgDonationProductId = "prod_PVHeyyjU9tiubh";
+const oneTimeDonationProductId = "prod_Otk0s2jykX4AzM";
 
 export async function createProduct() {
   let product;
@@ -24,17 +25,25 @@ export async function createProduct() {
 
 export async function createPrice(productPrice, interval) {
   const unitPrice = productPrice * 100;
+  const productId =
+    interval === "oneTime"
+      ? oneTimeDonationProductId
+      : recurrindgDonationProductId;
+  const type = interval === "oneTime" ? "one_time" : "recurring";
   // To-DO check if price and interval already exist
 
   let price;
   try {
     price = await stripe.prices.create({
       currency: "usd",
-      product: recurrindgDonationProductId,
+      product: productId,
       unit_amount: unitPrice,
-      recurring: {
-        interval: interval,
-      },
+      recurring:
+        interval === "oneTime"
+          ? {}
+          : {
+              interval: interval,
+            },
     });
   } catch (err) {
     price = null;

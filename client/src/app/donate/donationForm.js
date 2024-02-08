@@ -4,8 +4,8 @@ import { useState } from "react";
 // import BasicTabs from "./tabs";
 import VerticalLinearStepper from "./verticalStepper";
 
-export default async function Page() {
-  const [showAlert, setShowAlert] = useState(true);
+export default async function DonationForm() {
+  // const [showAlert, setShowAlert] = useState(true);
 
   return (
     <Grid
@@ -20,12 +20,12 @@ export default async function Page() {
       >
         <VerticalLinearStepper />
 
-        {showAlert && (
+        {/* {showAlert && (
           <Alert severity="error" onClose={setShowAlert(false)}>
             Oops, there was an error processing this request. Please contact
             esaylor@haitihomeofhope.org if the problem persists.
           </Alert>
-        )}
+        )} */}
       </Grid>
     </Grid>
   );
