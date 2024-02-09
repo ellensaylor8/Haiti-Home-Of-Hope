@@ -7,7 +7,6 @@ import ToggleButtonGroup from "@mui/material/ToggleButtonGroup";
 import Stepper from "@mui/material/Stepper";
 import Step from "@mui/material/Step";
 import StepLabel from "@mui/material/StepLabel";
-import StepContent from "@mui/material/StepContent";
 import Paper from "@mui/material/Paper";
 import Typography from "@mui/material/Typography";
 import InputLabel from "@mui/material/InputLabel";
@@ -179,7 +178,7 @@ export default function VerticalLinearStepper() {
 
   return (
     <Box sx={{ maxWidth: 400 }}>
-      <Stepper activeStep={activeStep} orientation="vertical">
+      <Stepper activeStep={activeStep}>
         {steps.map((step, index) => (
           <Step key={step.label}>
             <StepLabel
@@ -191,7 +190,7 @@ export default function VerticalLinearStepper() {
             >
               {step.label}
             </StepLabel>
-            <StepContent>
+            <>
               <Typography>{step.description}</Typography>
               {step.content}
               <Box sx={{ mb: 2 }}>
@@ -228,7 +227,7 @@ export default function VerticalLinearStepper() {
                   )}
                 </div>
               </Box>
-            </StepContent>
+            </>
           </Step>
         ))}
       </Stepper>

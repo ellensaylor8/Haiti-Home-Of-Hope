@@ -28,7 +28,9 @@ export default function give() {
           GIVE
         </Typography>
       </Grid>
+
       <GeneralFunds />
+      <DonationForm />
       <ScholarshipProgramCommunity />
     </Grid>
   );
