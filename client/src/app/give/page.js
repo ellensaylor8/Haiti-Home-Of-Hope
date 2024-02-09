@@ -30,8 +30,8 @@ export default function give() {
       </Grid>
 
       <GeneralFunds />
-      <DonationForm />
       <ScholarshipProgramCommunity />
+      <DonationForm />
     </Grid>
   );
 }

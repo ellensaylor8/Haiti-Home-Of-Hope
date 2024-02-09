@@ -46,7 +46,7 @@ export default function ScholarshipProgram() {
           lineHeight: "1.1",
         }}
       >
-        Scholarship Program
+        Pignon Scholarship Program
       </Typography>
       <Typography
         variant="body1"
@@ -54,7 +54,7 @@ export default function ScholarshipProgram() {
           marginBottom: "1rem",
         }}
       >
-        The Scholarship Program provides financial assistance for primary
+        The Pignon Scholarship Program provides financial assistance for primary
         education (similar to K-12 education in the United States) for Haitian
         children in the community who graduate out of either the Haiti Home of
         Hope{" "}
@@ -110,7 +110,7 @@ export default function ScholarshipProgram() {
           color: "white",
         }}
       >
-        Donate To the HHH Scholarship Program
+        Donate To the Pignon Scholarship Program
       </Button>
       <Typography>
         <i>

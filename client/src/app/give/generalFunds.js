@@ -26,7 +26,7 @@ export default function GeneralFunds() {
             lineHeight: "1.1",
           }}
         >
-          HHH General Funds
+          HHH Donations
         </Typography>
         <Typography
           variant="h5"
@@ -47,14 +47,41 @@ export default function GeneralFunds() {
           <ul>
             <li>
               Buy basic necessities for children in care at the orphanage
-              including food, clothing, bedding etc.
+              including food and clothing and help with general maintenance and
+              upkeep of the orphanage property. Choose <b>General Funds</b> as
+              your designation when donating.
             </li>
             <li>
               Provide primary education (simliar to K-12 education in the United
-              States) for all orphans under Haiti Home of Hope's care.
+              States) for all orphans under Haiti Home of Hope's care. Choose{" "}
+              <b>HHH Education</b> as your designation when donating.
             </li>
-            <li>3rd Example</li>
-            <li>4th Example</li>
+            <li>
+              Provide baby formula, whole milk and food for babies and children
+              in the Pignon community. Choose <b>Food & Milk Clinic</b> as your
+              designation when donating. Read more about our{" "}
+              <a
+                href="https://haiti-home-of-hope.web.app/ministries#FeedingClinic"
+                target="_blank"
+                className={styles.clinicLink}
+              >
+                Feeding
+              </a>{" "}
+              &{" "}
+              <a
+                href="https://haiti-home-of-hope.web.app/ministries#MilkClinic"
+                target="_blank"
+                className={styles.clinicLink}
+              >
+                Milk Clinic
+              </a>
+              .
+            </li>
+            <li>
+              Provide primary education for children in the local Pignon
+              community. Read more about our scholarship program for Pignon
+              children below.
+            </li>
           </ul>
         </Typography>
 
@@ -62,7 +89,7 @@ export default function GeneralFunds() {
           variant="outlined"
           id={styles.donateButton}
           onClick={() => {
-            window.open("https://donate.stripe.com/test_dR6g1h44IeGr0F2000");
+            window.open("http://localhost:3000/give#donate");
           }}
           sx={{
             marginBottom: "2rem",

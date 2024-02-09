@@ -1,0 +1,7 @@
+.formDiv {
+  border-top: 40px solid var(--light-green);
+}
+
+#stripeBadge {
+  width: 200px;
+}

@@ -64,6 +64,19 @@ export async function createPaymentLink(priceId) {
           quantity: 1,
         },
       ],
+      custom_fields: [
+        {
+          key: "designation",
+          label: { custom: "Designation", type: "custom" },
+          type: "dropdown",
+          dropdown: {
+            options: [
+              { label: "General Funds", value: "generalFunds" },
+              { label: "Education", value: "education" },
+            ],
+          },
+        },
+      ],
     });
   } catch (err) {
     paymentLink = null;
