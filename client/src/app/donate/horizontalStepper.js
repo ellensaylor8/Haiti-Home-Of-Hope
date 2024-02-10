@@ -61,9 +61,17 @@ export default function HorizontalLinearStepper() {
       let donation =
         donationAmount === "custom" ? customAmount : donationAmount;
 
-      const price = await createPrice(donation, donationFrequency);
+      const priceId = await createPrice(
+        donation,
+        donationFrequency,
+        designation
+      );
 
-      const paymentLink = await createPaymentLink(price.id);
+      const paymentLink = await createPaymentLink(
+        priceId,
+        donationFrequency,
+        designation
+      );
       if (paymentLink) {
         window.open(paymentLink.url);
       }

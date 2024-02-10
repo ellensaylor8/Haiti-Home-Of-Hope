@@ -2,8 +2,6 @@
 import styles from "./donationForm.module.css";
 import { Alert, Grid, Typography } from "@mui/material";
 import { useState } from "react";
-// import BasicTabs from "./tabs";
-import VerticalLinearStepper from "./verticalStepper";
 import HorizontalLinearStepper from "./horizontalStepper";
 
 export default async function DonationForm() {

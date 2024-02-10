@@ -3,8 +3,6 @@ import styles from "./nav.module.css";
 import { useEffect, useState } from "react";
 import AppBar from "@mui/material/AppBar";
 import Box from "@mui/material/Box";
-import Dialog from "@mui/material/Dialog";
-import DialogTitle from "@mui/material/DialogTitle";
 import Toolbar from "@mui/material/Toolbar";
 import IconButton from "@mui/material/IconButton";
 import Typography from "@mui/material/Typography";
@@ -201,21 +199,12 @@ export default function NavBar() {
                 padding: "5px 10px",
               }}
               onClick={() => {
-                window.open(
-                  "https://www.paypal.com/US/fundraiser/charity/3807057"
-                );
+                window.open("http://localhost:3000/give#donate");
               }}
             >
               Donate
             </Button>
           </Box>
-          <Dialog onClose={handleClose} open={open}>
-            <DialogTitle>Set backup account</DialogTitle>
-            <iframe
-              target="_blank"
-              src="https://www.paypal.com/donate/?hosted_button_id=9SPB788Q6KC2W"
-            ></iframe>
-          </Dialog>
         </Toolbar>
       </Container>
     </AppBar>
