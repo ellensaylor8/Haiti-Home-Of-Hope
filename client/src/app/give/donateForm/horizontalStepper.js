@@ -1,5 +1,4 @@
 import * as React from "react";
-import styles from "./horizontalStepper.module.css";
 import { ThemeProvider, createTheme } from "@mui/material/styles";
 import { useState } from "react";
 import Box from "@mui/material/Box";
@@ -18,13 +17,15 @@ import Select from "@mui/material/Select";
 import OutlinedInput from "@mui/material/OutlinedInput";
 import InputAdornment from "@mui/material/InputAdornment";
 import { createPaymentLink, createPrice } from "@/app/actions";
-
 const theme = createTheme({
   components: {
-    // Name of the component
+    MuiStepLabel: {
+      styleOverrides: {
+        root: {},
+      },
+    },
     MuiSelect: {
       styleOverrides: {
-        // Name of the slot
         "MuiSelect-outlined": {
           color: "var(--primary-green)",
         },
@@ -32,7 +33,6 @@ const theme = createTheme({
     },
     MuiStepIcon: {
       styleOverrides: {
-        // Name of the slot
         root: {
           "&.Mui-active": {
             color: "var(--primary-green)",
@@ -45,7 +45,6 @@ const theme = createTheme({
     },
     MuiToggleButton: {
       styleOverrides: {
-        // Name of the slot
         root: {
           "&.Mui-selected": {
             backgroundColor: "var(--light-green)",
@@ -55,6 +54,17 @@ const theme = createTheme({
     },
   },
 });
+
+theme.components.MuiStepLabel = {
+  styleOverrides: {
+    root: {
+      [theme.breakpoints.down("sm")]: {
+        position: "relative",
+        display: "block",
+      },
+    },
+  },
+};
 
 const paymentLinks = {
   week: {},
@@ -323,9 +333,7 @@ export default function HorizontalLinearStepper() {
             }
             return (
               <Step key={step.label}>
-                <StepLabel {...labelProps} className={styles.stepLabel}>
-                  {step.label}
-                </StepLabel>
+                <StepLabel {...labelProps}>{step.label}</StepLabel>
               </Step>
             );
           })}
