@@ -46,10 +46,10 @@ export default function GeneralFunds() {
         >
           <ul>
             <li>
-              Buy basic necessities for children in care at the orphanage
+              Buy basic necessities for children in care at Haiti Home of Hope
               including food and clothing and help with general maintenance and
-              upkeep of the orphanage property. Choose <b>General Funds</b> as
-              your designation when donating.
+              upkeep of the property. Choose <b>General Funds</b> as your
+              designation when donating.
             </li>
             <li>
               Provide primary education (simliar to K-12 education in the United
@@ -89,7 +89,7 @@ export default function GeneralFunds() {
           variant="outlined"
           id={styles.donateButton}
           onClick={() => {
-            window.open("http://localhost:3000/give#donate");
+            window.open("https://haiti-home-of-hope.web.app/give#donate");
           }}
           sx={{
             marginBottom: "2rem",
@@ -101,9 +101,6 @@ export default function GeneralFunds() {
         >
           Donate Now
         </Button>
-        <Typography>
-          Read more about our scholarship program and how to donate below.
-        </Typography>
       </Grid>
       <Grid item xs={12} md={6} id={styles.generalDonationsImage}></Grid>
     </Grid>

@@ -35,7 +35,7 @@ export default function TeamMembers() {
   return (
     <Grid item xs={12} className={styles.teamContainer}>
       <BasicModal ref={modalRef} />
-      <ImageList cols={mobile ? 1 : 4} gap={16}>
+      <ImageList cols={mobile ? 1 : 5} gap={16}>
         {itemData.map((item) => (
           <ImageListItem
             sx={{ overflowY: "hidden" }}
@@ -111,7 +111,15 @@ const itemData = [
     title: "Directors of Field Operations",
     facebook: "https://www.facebook.com/jennifer.w.campbell.98",
     linkedIn: null,
-    bio: "Bill and Jennifer were commissioned to the field on January 5, 2003 by Red Bridge Baptist Church. They have led and directed the ministry since the foundation. Bill and Jennifer direct all aspects of the work on the ground at the Haiti Home of Hope. Their ministry involves full time care for over 30 orphans, running the Feeding Program and Milk Clinic every week, maintenance of the property, directing the Haitian staff, and many more tasks. Their dedication and servant attitude towards the Lord through serving these children is truly an inspiration for all.",
+    bio: "Bill and Jennifer were commissioned to the field on January 5, 2003 by Red Bridge Baptist Church. They have led and directed the ministry since the foundation. Bill and Jennifer direct all aspects of the work on the ground at Haiti Home of Hope. Their ministry involves full time care for over 30 orphans, running the Feeding Program and Milk Clinic every week, maintenance of the property, directing the Haitian staff, and many more tasks. Their dedication and servant attitude towards the Lord through serving these children is truly an inspiration for all.",
+  },
+  {
+    img: "/images/bio/Clebert_Bio.jpg",
+    name: "Pastor Clebert",
+    title: "",
+    facebook: null,
+    linkedIn: null,
+    bio: "",
   },
   {
     img: "/images/bio/Pastor_Bio.jpg",

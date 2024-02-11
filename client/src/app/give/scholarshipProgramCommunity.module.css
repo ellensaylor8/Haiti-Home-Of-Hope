@@ -6,6 +6,7 @@
 }
 
 #scholarshipDonationImageQuilt {
+  overflow: scroll;
   height: fit-content;
   border: 15px solid white;
 }

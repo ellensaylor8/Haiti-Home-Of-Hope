@@ -1,5 +1,6 @@
 .teamContainer {
   padding: 0rem 3rem;
+  overflow: scroll;
 }
 
 .listItem:hover {

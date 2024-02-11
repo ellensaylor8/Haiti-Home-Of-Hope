@@ -46,7 +46,7 @@ export default function ScholarshipProgram() {
           }}
         >
           The Haiti Home of Hope Scholarship Program provides financial
-          assistance for higher education to HHH Orphanage graduates.
+          assistance for higher education to Haiti Home of Hope graduates.
           Scholarships are based on need, each case is unique.
           <br />
           <br />

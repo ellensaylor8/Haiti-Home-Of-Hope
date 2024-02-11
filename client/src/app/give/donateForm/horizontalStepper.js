@@ -55,30 +55,68 @@ const theme = createTheme({
   },
 });
 
+const paymentLinks = {
+  week: {},
+  month: {
+    generalFunds: {
+      10: "https://buy.stripe.com/test_bIYaHacDt9oba7S8wF",
+      30: "https://buy.stripe.com/test_dR6g1u46X57V7ZK00j",
+      50: "https://buy.stripe.com/test_aEUdTmgTJ8k7fscfZi",
+    },
+    hhhEducation: {
+      10: "https://buy.stripe.com/test_7sI02w7j9eIvfsc7sO",
+      30: "https://buy.stripe.com/test_4gw02wcDtcAn4NybJ5",
+      50: "https://buy.stripe.com/test_7sI4iMcDtbwj5RCeVi",
+    },
+    pignonEducation: {},
+    pignonClinics: {
+      10: "https://buy.stripe.com/test_5kA6qU7j943R7ZK00q",
+      30: "https://buy.stripe.com/test_5kA5mQ9rh8k793O3cD",
+      50: "https://buy.stripe.com/test_3cs9D6dHxdErdk4fZq",
+    },
+    housingFund: {},
+  },
+  year: {},
+  oneTime: {
+    generalFunds: {
+      10: "https://buy.stripe.com/test_fZe7uY9rh2ZNa7S28B",
+      30: "https://buy.stripe.com/test_fZe2aE7j98k7dk4eVo",
+      50: "https://buy.stripe.com/test_5kAbLe5b157Va7S28f",
+    },
+    hhhEducation: {},
+    pignonClinics: {},
+    housingFund: {},
+  },
+};
+
 export default function HorizontalLinearStepper() {
-  async function createCustomPaymentLink() {
+  async function getPaymentLink() {
     try {
-      let donation =
-        donationAmount === "custom" ? customAmount : donationAmount;
-
-      const priceId = await createPrice(
-        donation,
-        donationFrequency,
-        designation
-      );
-
-      const paymentLink = await createPaymentLink(
-        priceId,
-        donationFrequency,
-        designation
-      );
-      if (paymentLink) {
-        window.open(paymentLink.url);
+      const donationInDollars =
+        (donationAmount === "custom" ? customAmount : donationAmount) * 100;
+      let link = paymentLinks[donationFrequency][designation][donationAmount];
+      if (donationAmount === "custom" || !link) {
+        console.log("creating custom link");
+        link = await createCustomPaymentLink(donationInDollars);
+        console.log(link);
       }
+      window.open(link);
     } catch (err) {
       console.error(err);
+      window.alert(
+        "Oops! There was an error creating a payment link. Please contact ellen.saylor@redbridgebaptist.org if the problem persists."
+      );
     }
-    return;
+  }
+
+  async function createCustomPaymentLink(donationInDollars) {
+    const priceId = await createPrice(
+      donationInDollars,
+      donationFrequency,
+      designation
+    );
+
+    return await createPaymentLink(priceId, donationFrequency, designation);
   }
   const [activeStep, setActiveStep] = React.useState(0);
 
@@ -173,8 +211,10 @@ export default function HorizontalLinearStepper() {
     switch (designation) {
       case "generalFunds":
         return "General Funds";
-      case "education":
-        return "Education";
+      case "hhhEducation":
+        return "HHH Education";
+      case "pignonEducation":
+        return "Pignon Education";
       case "pignonClinics":
         return "Milk & Feeding Clinic";
       case "housingFund":
@@ -249,8 +289,11 @@ export default function HorizontalLinearStepper() {
             <MenuItem value="generalFunds">
               {donationDesignationLabel("generalFunds")}
             </MenuItem>
-            <MenuItem value="education">
-              {donationDesignationLabel("education")}
+            <MenuItem value="hhhEducation">
+              {donationDesignationLabel("hhhEducation")}
+            </MenuItem>
+            <MenuItem value="pignonEducation">
+              {donationDesignationLabel("pignonEducation")}
             </MenuItem>
             <MenuItem value="pignonClinics">
               {donationDesignationLabel("pignonClinics")}
@@ -314,9 +357,7 @@ export default function HorizontalLinearStepper() {
               <Button
                 sx={{ color: "var(--primary-green)" }}
                 onClick={
-                  activeStep === steps.length - 1
-                    ? createCustomPaymentLink
-                    : handleNext
+                  activeStep === steps.length - 1 ? getPaymentLink : handleNext
                 }
                 disabled={continueDisabled(activeStep)}
               >

@@ -187,7 +187,6 @@ export default function NavBar() {
             })}
           </Box>
           <Box sx={{ flexGrow: 0 }}>
-            {/* <PayPalButton /> */}
             <Button
               id={styles.donateButton}
               variant="outlined"
@@ -199,7 +198,7 @@ export default function NavBar() {
                 padding: "5px 10px",
               }}
               onClick={() => {
-                window.open("http://localhost:3000/give#donate");
+                window.open("https://haiti-home-of-hope.web.app/give#donate");
               }}
             >
               Donate

@@ -33,6 +33,14 @@
   text-transform: uppercase;
 }
 
+.clinicLink {
+  color: var(--primary-green);
+}
+
+.clinicLink:hover {
+  color: grey;
+}
+
 @media only screen and (max-width: 500px) {
   .storyDescription {
     padding: 3rem;

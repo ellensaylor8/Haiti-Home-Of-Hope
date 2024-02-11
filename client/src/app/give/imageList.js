@@ -21,11 +21,7 @@ export default function QuiltedImageList(props) {
   const [visibleTitle, setVisibleTitle] = useState();
 
   return (
-    <ImageList
-      className={styles.imgList}
-      variant="quilted"
-      cols={props.mobile ? 1 : 2}
-    >
+    <ImageList variant="quilted" cols={props.mobile ? 1 : 2}>
       {itemData.map((item) => (
         <ImageListItem
           ref={imgListItemRef}
@@ -36,7 +32,7 @@ export default function QuiltedImageList(props) {
           rows={item.rows || 1}
         >
           <img
-            {...srcset(item.img, 350, item.rows, item.cols)}
+            {...srcset(item.img, 200, item.rows, item.cols)}
             alt={item.title}
             loading="lazy"
           />
@@ -59,19 +55,19 @@ export default function QuiltedImageList(props) {
 
 const itemData = [
   {
-    img: "/images/ministry/Fricot_GradDay.jpeg",
-    title: "Fricot Graduation Day",
+    img: "/images/ministry/pignonBoy_School.jpeg",
+    title: "",
   },
   {
-    img: "/images/ministry/Lumanes_GradDay.jpeg",
-    title: "Lumanes Graduation Day",
+    img: "/images/ministry/pignonGirls.jpeg",
+    title: "Twin Pignon girls with their adopted mother",
   },
   {
-    img: "/images/ministry/Devenel_GradDay.jpeg",
-    title: "Devenel Graduation Day",
+    img: "/images/ministry/pignonKiddos_School.jpeg",
+    title: "",
   },
   {
-    img: "/images/ministry/Devenel_DrivingSchoolCert.jpeg",
-    title: "Devenel Driving School Certificate",
+    img: "/images/ministry/twinPignonChildren_School.jpeg",
+    title: "Twin Pignon Girls",
   },
 ];

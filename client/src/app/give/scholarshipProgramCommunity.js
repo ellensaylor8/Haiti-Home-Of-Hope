@@ -55,9 +55,8 @@ export default function ScholarshipProgram() {
         }}
       >
         The Pignon Scholarship Program provides financial assistance for primary
-        education (similar to K-12 education in the United States) for Haitian
-        children in the community who graduate out of either the Haiti Home of
-        Hope{" "}
+        education (similar to K-12 education in the United States) for local
+        Pignon children who graduate out of either the Haiti Home of Hope{" "}
         <a
           href="https://haiti-home-of-hope.web.app/ministries#FeedingClinic"
           target="_blank"
@@ -93,25 +92,13 @@ export default function ScholarshipProgram() {
         with Haiti Home of Hope's Field Operators twice a year with their school
         uniform and grade card.
         <br />
-        <br />
-        We appreciate any amount you feel led to give!
       </Typography>
-      <Button
-        id={styles.scholarshipDonateButton}
-        variant="outlined"
-        onClick={() => {
-          window.open("https://donate.stripe.com/test_5kA7uLdFigOz9by5km");
-        }}
-        sx={{
-          marginBottom: "2rem",
-          marginTop: "1rem",
-          backgroundColor: "var(--primary-green)",
-          borderColor: "var(--primary-green)",
-          color: "white",
-        }}
-      >
-        Donate To the Pignon Scholarship Program
-      </Button>
+      <Typography variant="subtitle1">
+        We appreciate any amount you feel led to give! Donate to the Pignon
+        Scholarship Program by choosing <b>Pignon Education</b> for your
+        donation designation below.
+      </Typography>
+      <br />
       <Typography>
         <i>
           Please reach out to&nbsp;

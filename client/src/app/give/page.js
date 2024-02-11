@@ -4,7 +4,7 @@ import styles from "./page.module.css";
 import { Grid, Typography } from "@mui/material";
 import GeneralFunds from "./generalFunds";
 import ScholarshipProgramCommunity from "./scholarshipProgramCommunity.js";
-import DonationForm from "../donate/donationForm";
+import DonationForm from "./donateForm/donationForm";
 
 export default function give() {
   return (
