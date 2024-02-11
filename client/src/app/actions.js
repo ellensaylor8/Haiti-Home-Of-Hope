@@ -34,8 +34,9 @@ export async function createProduct(productName) {
 }
 
 export async function createPrice(productPrice, interval, designation) {
-  interval === "oneTime" ? "oneTime" : "recurring";
-  const productId = productIds[interval][designation];
+  const frequency = interval === "oneTime" ? "oneTime" : "recurring";
+  console.log(frequency, designation);
+  const productId = productIds[frequency][designation];
 
   console.log("creating new price");
   const price = await stripe.prices.create({

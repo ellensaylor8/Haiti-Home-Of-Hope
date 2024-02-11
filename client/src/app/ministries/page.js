@@ -133,6 +133,17 @@ export default function ministries() {
             additional orphans for 7 years due in part to the ability to
             preserve the family through the help of the Milk Clinic. Praise the
             Lord!
+            <br />
+            <br />
+            Select <b>Milk & Feeding Clinic</b> as your designation when you
+            <Button
+              id={styles.donateButton}
+              onClick={() =>
+                window.open("https://haiti-home-of-hope.web.app/give#donate")
+              }
+            >
+              Donate
+            </Button>
           </Typography>
         </Grid>
         <Grid item xs={12} md={6} id={styles.milkClinicImage}></Grid>

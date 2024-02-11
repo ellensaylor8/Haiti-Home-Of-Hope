@@ -32,11 +32,11 @@ export default function QuiltedImageList(props) {
           rows={item.rows || 1}
         >
           <img
-            {...srcset(item.img, 200, item.rows, item.cols)}
+            {...srcset(item.img, 150, item.rows, item.cols)}
             alt={item.title}
             loading="lazy"
           />
-          <Slide
+          {/* <Slide
             direction="up"
             in={props.mobile || item.title === visibleTitle}
             container={imgListItemRef.current}
@@ -46,7 +46,7 @@ export default function QuiltedImageList(props) {
               title={item.name}
               subtitle={item.title}
             />
-          </Slide>
+          </Slide> */}
         </ImageListItem>
       ))}
     </ImageList>
@@ -56,18 +56,18 @@ export default function QuiltedImageList(props) {
 const itemData = [
   {
     img: "/images/ministry/pignonBoy_School.jpeg",
-    title: "",
+    // title: "",
   },
   {
     img: "/images/ministry/pignonGirls.jpeg",
-    title: "Twin Pignon girls with their adopted mother",
+    // title: "Twin Pignon girls with their adopted mother",
   },
   {
     img: "/images/ministry/pignonKiddos_School.jpeg",
-    title: "",
+    // title: "",
   },
   {
     img: "/images/ministry/twinPignonChildren_School.jpeg",
-    title: "Twin Pignon Girls",
+    // title: "Twin Pignon Girls",
   },
 ];

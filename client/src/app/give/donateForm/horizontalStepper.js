@@ -1,4 +1,5 @@
 import * as React from "react";
+import styles from "./horizontalStepper.module.css";
 import { ThemeProvider, createTheme } from "@mui/material/styles";
 import { useState } from "react";
 import Box from "@mui/material/Box";
@@ -92,13 +93,11 @@ const paymentLinks = {
 export default function HorizontalLinearStepper() {
   async function getPaymentLink() {
     try {
-      const donationInDollars =
-        (donationAmount === "custom" ? customAmount : donationAmount) * 100;
+      const donationInDollars = donationAmountComputation() * 100;
       let link = paymentLinks[donationFrequency][designation][donationAmount];
       if (donationAmount === "custom" || !link) {
         console.log("creating custom link");
         link = await createCustomPaymentLink(donationInDollars);
-        console.log(link);
       }
       window.open(link);
     } catch (err) {
@@ -324,7 +323,9 @@ export default function HorizontalLinearStepper() {
             }
             return (
               <Step key={step.label}>
-                <StepLabel {...labelProps}>{step.label}</StepLabel>
+                <StepLabel {...labelProps} className={styles.stepLabel}>
+                  {step.label}
+                </StepLabel>
               </Step>
             );
           })}
@@ -337,7 +338,6 @@ export default function HorizontalLinearStepper() {
             </Button>
           </Paper>
         )}
-        :
         {
           <React.Fragment>
             <Typography sx={{ mt: 2, mb: 1 }}>
@@ -361,9 +361,7 @@ export default function HorizontalLinearStepper() {
                 }
                 disabled={continueDisabled(activeStep)}
               >
-                {activeStep === steps.length - 1
-                  ? "Enter Payment Details"
-                  : "Next"}
+                {activeStep === steps.length - 1 ? "Stripe Checkout" : "Next"}
               </Button>
             </Box>
           </React.Fragment>

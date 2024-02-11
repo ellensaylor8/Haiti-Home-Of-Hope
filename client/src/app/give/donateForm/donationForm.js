@@ -58,10 +58,11 @@ export default async function DonationForm() {
             lineHeight: "1.1",
           }}
         >
-          Pay by Check{" "}
+          Give by Check{" "}
         </Typography>
         <Typography variant="overline">
-          Please make checks payable to <b>Haiti Home of Hope, Inc.</b>
+          Please make checks payable to{" "}
+          <b id={styles.hhhTitle}>Haiti Home of Hope, Inc.</b>
         </Typography>
         <Typography variant="body1">Red Bridge Baptist Church</Typography>
         <Typography variant="body1">

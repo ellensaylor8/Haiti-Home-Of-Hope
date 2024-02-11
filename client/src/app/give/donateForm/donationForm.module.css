@@ -10,3 +10,7 @@
   display: inline-block;
   vertical-align: middle;
 }
+
+#hhhTitle {
+  color: var(--primary-green);
+}
