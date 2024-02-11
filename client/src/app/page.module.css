@@ -58,6 +58,16 @@
     top: -80px;
   }
 
+  .headerGrid::after {
+    content: "";
+    background-color: rgb(76, 127, 100, 0.3);
+    position: absolute;
+    top: -60px;
+    right: 0px;
+    bottom: 0px;
+    left: 0px;
+  }
+
   .greeting {
     margin-top: 50vh;
     font-size: 3rem;
