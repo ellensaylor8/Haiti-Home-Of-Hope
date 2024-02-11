@@ -116,10 +116,10 @@ const itemData = [
   {
     img: "/images/bio/Clebert_Bio.jpg",
     name: "Pastor Clebert",
-    title: "",
-    facebook: null,
+    title: "General Supervisor",
+    facebook: "https://www.facebook.com/clebert.jean.161",
     linkedIn: null,
-    bio: "",
+    bio: "Pastor Clebert has been an instrumental member of the leadership team at Haiti Home of Hope for over 20 years.",
   },
   {
     img: "/images/bio/Pastor_Bio.jpg",
