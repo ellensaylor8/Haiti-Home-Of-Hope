@@ -113,7 +113,7 @@ export default function HorizontalLinearStepper() {
     } catch (err) {
       console.error(err);
       window.alert(
-        "Oops! There was an error creating a payment link. Please contact ellen.saylor@redbridgebaptist.org if the problem persists."
+        "Oops! There was an error creating a payment link. Please contact contact@haitihomeofhope.org if the problem persists."
       );
     }
   }
