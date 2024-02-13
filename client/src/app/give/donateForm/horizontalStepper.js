@@ -102,6 +102,9 @@ const paymentLinks = {
 
 export default function HorizontalLinearStepper() {
   async function getPaymentLink() {
+    // immediately create new window to avoid popup blocker
+    let paymentWindow = window.open("", "_blank");
+
     try {
       const donationInDollars = donationAmountComputation() * 100;
       let link = paymentLinks[donationFrequency][designation][donationAmount];
@@ -109,12 +112,14 @@ export default function HorizontalLinearStepper() {
         console.log("creating custom link");
         link = await createCustomPaymentLink(donationInDollars);
       }
-      window.open(link);
+      paymentWindow.location.href = link;
+      // window.open(link);
     } catch (err) {
       console.error(err);
       window.alert(
         "Oops! There was an error creating a payment link. Please contact contact@haitihomeofhope.org if the problem persists."
       );
+      paymentWindow.close();
     }
   }
 
