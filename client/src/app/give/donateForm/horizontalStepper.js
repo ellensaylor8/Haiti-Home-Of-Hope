@@ -107,7 +107,8 @@ export default function HorizontalLinearStepper() {
 
     try {
       const donationInDollars = donationAmountComputation() * 100;
-      let link = paymentLinks[donationFrequency][designation][donationAmount];
+      let link =
+        paymentLinks[donationFrequency]?.[designation]?.[donationAmount];
       if (donationAmount === "custom" || !link) {
         console.log("creating custom link");
         link = await createCustomPaymentLink(donationInDollars);
