@@ -67,36 +67,113 @@ theme.components.MuiStepLabel = {
 };
 
 const paymentLinks = {
-  week: {},
-  month: {
+  week: {
     generalFunds: {
-      10: "https://buy.stripe.com/test_bIYaHacDt9oba7S8wF",
-      30: "https://buy.stripe.com/test_dR6g1u46X57V7ZK00j",
-      50: "https://buy.stripe.com/test_aEUdTmgTJ8k7fscfZi",
+      10: "https://buy.stripe.com/8wM17j2131BFfeMcNz",
+      30: "https://buy.stripe.com/dR66rD7ln8037MkbJw",
+      50: "https://buy.stripe.com/dR617j7ln0xBc2A4hd",
     },
     hhhEducation: {
-      10: "https://buy.stripe.com/test_7sI02w7j9eIvfsc7sO",
-      30: "https://buy.stripe.com/test_4gw02wcDtcAn4NybJ5",
-      50: "https://buy.stripe.com/test_7sI4iMcDtbwj5RCeVi",
+      10: "https://buy.stripe.com/3csbLXaxzbcf6Ig3cY",
+      30: "https://buy.stripe.com/8wM3fr6hja8bd6E3d1",
+      50: "https://buy.stripe.com/bIYbLXgVX6VZ6Ig150",
     },
-    pignonEducation: {},
+    pignonEducation: {
+      10: "https://buy.stripe.com/28o2bncFH3JN0jSbJt",
+      30: "https://buy.stripe.com/5kAg2dcFH8039UseVK",
+      50: "https://buy.stripe.com/28o03ffRTgwz5Ec00V",
+    },
     pignonClinics: {
-      10: "https://buy.stripe.com/test_5kA6qU7j943R7ZK00q",
-      30: "https://buy.stripe.com/test_5kA5mQ9rh8k793O3cD",
-      50: "https://buy.stripe.com/test_3cs9D6dHxdErdk4fZq",
+      10: "https://buy.stripe.com/3cs7vH3571BF1nW9Bk",
+      30: "https://buy.stripe.com/eVacQ1cFH0xB4A87tj",
+      50: "https://buy.stripe.com/aEU2bndJLbcf1nWfZS",
     },
-    housingFund: {},
+    housingFund: {
+      10: "https://buy.stripe.com/9AQ5nzcFH6VZ2s03cV",
+      30: "https://buy.stripe.com/28oeY9cFH2FJ3w44h8",
+      50: "https://buy.stripe.com/8wMg2dfRTeor4A8aFx",
+    },
   },
-  year: {},
+  month: {
+    generalFunds: {
+      10: "https://buy.stripe.com/bIY17jdJLa8b2s0cMM",
+      30: "https://buy.stripe.com/7sI7vHgVX1BF1nW7st",
+      50: "https://buy.stripe.com/aEUeY95dfa8b8QoaEG",
+    },
+    hhhEducation: {
+      10: "https://buy.stripe.com/8wM2bn49beoraYwdQV",
+      30: "https://buy.stripe.com/fZeg2d49b6VZ9Us004",
+      50: "https://buy.stripe.com/dR67vH3579475EcdQT",
+    },
+    pignonEducation: {
+      10: "https://buy.stripe.com/6oEg2d213cgj8Qo28e",
+      30: "https://buy.stripe.com/6oEg2d8pr0xBgiQ5kr",
+      50: "https://buy.stripe.com/dR68zL3572FJ9UsfZ6",
+    },
+    pignonClinics: {
+      10: "https://buy.stripe.com/4gwbLX357dknd6E28j",
+      30: "https://buy.stripe.com/9AQ3frbBD4NRaYw7sC",
+      50: "https://buy.stripe.com/fZe03f5dfcgj8QofZ7",
+    },
+    housingFund: {
+      10: "https://buy.stripe.com/8wMbLXcFHdkn1nWbIU",
+      30: "https://buy.stripe.com/aEU03fbBD2FJ9UsdR3",
+      50: "https://buy.stripe.com/cN203f213gwzd6E00e",
+    },
+  },
+  year: {
+    generalFunds: {
+      10: "https://buy.stripe.com/dR68zL7lnbcfgiQcNi",
+      30: "https://buy.stripe.com/3cs9DP0WZbcfc2A7sX",
+      50: "https://buy.stripe.com/8wMbLXaxz4NR4A84gK",
+    },
+    hhhEducation: {
+      10: "https://buy.stripe.com/5kA7vHfRTfsv8Qo6oV",
+      30: "https://buy.stripe.com/4gwbLXaxzfsvfeMcNk",
+      50: "https://buy.stripe.com/bIY3fr8prfsv7MkbJh",
+    },
+    pignonEducation: {
+      10: "https://buy.stripe.com/bIY8zL7lncgj9UsbJk",
+      30: "https://buy.stripe.com/14k5nz9tv0xBaYw8x7",
+      50: "https://buy.stripe.com/eVa6rDfRTeor4A87t2",
+    },
+    pignonClinics: {
+      10: "https://buy.stripe.com/bIY8zL5dffsv5Ec00D",
+      30: "https://buy.stripe.com/7sI3fraxz1BFc2A3cQ",
+      50: "https://buy.stripe.com/3cs4jv8pra8b2s000F",
+    },
+    housingFund: {
+      10: "https://buy.stripe.com/bIY17j6hjcgj2s03cU",
+      30: "https://buy.stripe.com/aEUbLX5df5RVgiQ8xd",
+      50: "https://buy.stripe.com/5kAbLX7lnfsv8Qo3cS",
+    },
+  },
   oneTime: {
     generalFunds: {
-      10: "https://buy.stripe.com/test_fZe7uY9rh2ZNa7S28B",
-      30: "https://buy.stripe.com/test_fZe2aE7j98k7dk4eVo",
-      50: "https://buy.stripe.com/test_5kAbLe5b157Va7S28f",
+      10: "https://buy.stripe.com/bIY2bndJL9472s0dRh",
+      30: "https://buy.stripe.com/cN28zL6hjfsv7MkcNe",
+      50: "https://buy.stripe.com/aEU7vH0WZgwz1nW5kN",
     },
-    hhhEducation: {},
-    pignonClinics: {},
-    housingFund: {},
+    hhhEducation: {
+      10: "https://buy.stripe.com/14k2bnbBDfsvd6E5kK",
+      30: "https://buy.stripe.com/fZe8zL9tvdkn7Mk4gF",
+      50: "https://buy.stripe.com/8wM03f5dfbcfc2A14s",
+    },
+    pignonEducation: {
+      10: "https://buy.stripe.com/14k3frgVXfsv0jS9AV",
+      30: "https://buy.stripe.com/14k5nz6hjeor0jS5kG",
+      50: "https://buy.stripe.com/5kAeY99tv2FJ6Ig8wT",
+    },
+    pignonClinics: {
+      10: "https://buy.stripe.com/8wM3frbBDbcfd6E9AS",
+      30: "https://buy.stripe.com/9AQ8zLbBD9475Ec8wP",
+      50: "https://buy.stripe.com/8wMeY95df2FJeaI28s",
+    },
+    housingFund: {
+      10: "https://buy.stripe.com/00g6rD0WZ3JNc2AeV9",
+      30: "https://buy.stripe.com/8wMdU5gVX1BFc2AfZe",
+      50: "https://buy.stripe.com/eVa5nzfRTbcfeaIfZf",
+    },
   },
 };
 

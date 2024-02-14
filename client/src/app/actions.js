@@ -1,24 +1,22 @@
 // Set your secret key. Remember to switch to your live secret key in production.
 // See your keys here: https://dashboard.stripe.com/apikeys
 // const stripe = require("stripe")(process.env.STRIPE_SECRET_KEY);
-const stripe = require("stripe")(
-  "sk_test_51O5wQoLrTcClMeLC3evvBk96DRd1HNIfJFMazARTu07M5lb7Bm1xX9yyzsOrpL2iZAFkiARybp4qsB6NUq36LQ8x00qMah8vwI"
-);
+const stripe = require("stripe")("");
 
 const productIds = {
   recurring: {
-    generalFunds: "prod_PVHeyyjU9tiubh",
-    hhhEducation: "prod_PXTRTYoezKmLb8",
-    pignonEducation: "prod_PXZeVDz6HOvGrU",
-    pignonClinics: "prod_PXTUYo7UOLXRbC",
-    housingFund: "prod_PXTWonbwEbjS0Y",
+    generalFunds: "prod_PYfLQmWHys0kOy",
+    hhhEducation: "prod_PYfL6Rff3Fplho",
+    pignonEducation: "prod_PYYm3WUPcAO04d",
+    pignonClinics: "prod_PYfLjmufv75rn9",
+    housingFund: "prod_PYfLQSCU05lzKV",
   },
   oneTime: {
-    generalFunds: "prod_Otk0s2jykX4AzM",
-    hhhEducation: "prod_PXTXxckdnCIDoi",
-    pignonEducation: "prod_PXZgJho8MUlcdG",
-    pignonClinics: "prod_PXTYKGgthZyJzn",
-    housingFund: "prod_PXTZ9s4spcPHPj",
+    generalFunds: "prod_PYfLaF0DGTz3e4",
+    hhhEducation: "prod_PYfKeM0SFQe1oY",
+    pignonEducation: "prod_PYYmcaQCZkQy9s",
+    pignonClinics: "prod_PYfKRx2NLPSt7D",
+    housingFund: "prod_PYYmQQQWhNnQbw",
   },
 };
 
