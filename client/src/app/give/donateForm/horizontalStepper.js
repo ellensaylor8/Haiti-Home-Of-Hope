@@ -181,6 +181,7 @@ export default function HorizontalLinearStepper() {
   async function getPaymentLink() {
     // immediately create new window to avoid popup blocker
     let paymentWindow = window.open("", "_blank");
+    paymentWindow.document.write('<img src="images/Circles-menu-3.gif">');
 
     try {
       const donationInDollars = donationAmountComputation() * 100;
@@ -192,11 +193,9 @@ export default function HorizontalLinearStepper() {
           `https://us-central1-haiti-home-of-hope.cloudfunctions.net/createPaymentLink/?donationInDollars=${donationInDollars}&donationFrequency=${donationFrequency}&donationDesignation=${designation}`
         );
         link = await response.text();
-        console.log(link);
       }
 
       paymentWindow.location.href = link;
-      // window.open(link);
     } catch (err) {
       console.error(err);
       window.alert(
