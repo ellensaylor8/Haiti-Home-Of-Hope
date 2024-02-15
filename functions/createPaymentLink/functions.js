@@ -1,7 +1,5 @@
-// "use server";
-// Set your secret key. Remember to switch to your live secret key in production.
-// See your keys here: https://dashboard.stripe.com/apikeys
-// const stripe = require("stripe")(process.env.STRIPE_SECRET_KEY);
+require("dotenv").config();
+const stripe = require("stripe")(process.env.STRIPE_SECRET_KEY);
 
 const productIds = {
   recurring: {
@@ -20,7 +18,7 @@ const productIds = {
   },
 };
 
-export async function createProduct(productName) {
+async function createProduct(productName) {
   try {
     return await stripe.products.create({
       name: productName,
@@ -31,7 +29,7 @@ export async function createProduct(productName) {
   }
 }
 
-export async function createPrice(productPrice, interval, designation) {
+async function createPrice(productPrice, interval, designation) {
   try {
     const frequency = interval === "oneTime" ? "oneTime" : "recurring";
     console.log(frequency, designation);
@@ -58,7 +56,7 @@ export async function createPrice(productPrice, interval, designation) {
   }
 }
 
-export async function createPaymentLink(priceId) {
+async function createPaymentLinks(priceId) {
   console.log("creating payment link");
   try {
     const paymentLink = await stripe.paymentLinks.create({
@@ -77,3 +75,9 @@ export async function createPaymentLink(priceId) {
     throw new Error(err);
   }
 }
+
+module.exports = {
+  createProduct,
+  createPrice,
+  createPaymentLinks,
+};

@@ -16,7 +16,7 @@ import FormControl from "@mui/material/FormControl";
 import Select from "@mui/material/Select";
 import OutlinedInput from "@mui/material/OutlinedInput";
 import InputAdornment from "@mui/material/InputAdornment";
-import { createPaymentLink, createPrice } from "@/app/actions";
+
 const theme = createTheme({
   components: {
     MuiStepLabel: {
@@ -188,8 +188,13 @@ export default function HorizontalLinearStepper() {
         paymentLinks[donationFrequency]?.[designation]?.[donationAmount];
       if (donationAmount === "custom" || !link) {
         console.log("creating custom link");
-        link = await createCustomPaymentLink(donationInDollars);
+        const response = await fetch(
+          `https://us-central1-haiti-home-of-hope.cloudfunctions.net/createPaymentLink/?donationInDollars=${donationInDollars}&donationFrequency=${donationFrequency}&donationDesignation=${designation}`
+        );
+        link = await response.text();
+        console.log(link);
       }
+
       paymentWindow.location.href = link;
       // window.open(link);
     } catch (err) {
@@ -201,15 +206,6 @@ export default function HorizontalLinearStepper() {
     }
   }
 
-  async function createCustomPaymentLink(donationInDollars) {
-    const priceId = await createPrice(
-      donationInDollars,
-      donationFrequency,
-      designation
-    );
-
-    return await createPaymentLink(priceId, donationFrequency, designation);
-  }
   const [activeStep, setActiveStep] = React.useState(0);
 
   const handleNext = () => {

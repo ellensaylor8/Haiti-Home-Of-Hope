@@ -5,7 +5,7 @@ const nextConfig = {
       transform: "@mui/icons-material/{{ matches.[1] }}/{{member}}",
     },
   },
-  publicRuntimeConfig: {
+  env: {
     STRIPE_SECRET_KEY: process.env.STRIPE_SECRET_KEY,
   },
 };
