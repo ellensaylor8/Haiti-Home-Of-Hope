@@ -5,9 +5,6 @@ const nextConfig = {
       transform: "@mui/icons-material/{{ matches.[1] }}/{{member}}",
     },
   },
-  env: {
-    STRIPE_SECRET_KEY: process.env.STRIPE_SECRET_KEY,
-  },
 };
 
 module.exports = nextConfig;
