@@ -14,3 +14,11 @@
 #hhhTitle {
   color: var(--primary-green);
 }
+
+.contactEmail {
+  color: var(--primary-green);
+}
+
+.contactEmail::hover {
+  cursor: pointer;
+}

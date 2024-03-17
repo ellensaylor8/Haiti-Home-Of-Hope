@@ -137,6 +137,6 @@ const itemData = [
     title: "Chairman",
     facebook: "https://www.facebook.com/brenny007",
     linkedIn: "https://www.linkedin.com/in/chris-brennan-405a6034",
-    bio: "Chris has been the Chairman of the Haiti Home of Hope, Inc since 2012. He has served with the ministry in multiple roles since 2007. Chris has a Bachelor’s of Science in Computer Information Systems from DeVry University. After graduating, he went on to work at Cerner, a healthcare technology company, for 10 years as a Manager/Software Architect customizing back office solutions for Cerner and multiple health systems. He currently serves as the Director of Technology at Ascension, the largest nonprofit health system in the U.S.",
+    bio: "Chris has been Chairman of Haiti Home of Hope Inc. since 2012. He has served with the ministry in multiple roles since 2007. Chris has a Bachelor’s of Science in Computer Information Systems from DeVry University. After graduating, he went on to work at Cerner, a healthcare technology company, for 10 years as a Manager/Software Architect customizing back office solutions for Cerner and multiple health systems. He currently serves as the Director of Technology at Ascension, the largest nonprofit health system in the U.S.",
   },
 ];

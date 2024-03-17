@@ -1,0 +1,52 @@
+.banner {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  min-height: 30vh;
+  background: var(--primary-green);
+}
+
+.banner::after {
+  content: "";
+  background-color: var(--light-green);
+  position: absolute;
+  top: -80px;
+  right: 0px;
+  bottom: 0px;
+  left: 0px;
+}
+
+.pageTitle {
+  color: white;
+  z-index: 200;
+  text-transform: uppercase;
+  width: 100%;
+}
+
+.body {
+  padding: 4rem;
+  min-height: 50vh;
+}
+
+.sectionTitles {
+  color: var(--primary-green);
+  letter-spacing: 6px;
+  line-height: 1.1;
+}
+
+.icon {
+  transition: all 0.2s ease-in-out;
+  display: inline-block;
+  vertical-align: middle;
+  padding-right: 1rem;
+}
+
+.icon:hover {
+  transform: scale(1.2);
+  cursor: pointer;
+}
+
+.child {
+  display: inline-block;
+  vertical-align: middle;
+}

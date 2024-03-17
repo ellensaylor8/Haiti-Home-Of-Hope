@@ -62,11 +62,19 @@ export default async function DonationForm() {
         </Typography>
         <Typography variant="overline">
           Please make checks payable to{" "}
-          <b id={styles.hhhTitle}>Haiti Home of Hope, Inc.</b>
+          <b id={styles.hhhTitle}>Haiti Home of Hope Inc.</b>
         </Typography>
         <Typography variant="body1">Red Bridge Baptist Church</Typography>
         <Typography variant="body1">
           4901 E Red Bridge Road, Kansas City, MO 64137
+        </Typography>
+        <Typography variant="body1">p: 816-761-1194</Typography>
+        <br />
+        <br />
+        <Typography>
+          Questions or need to edit/cancel a subscription? Reach out to{" "}
+          <a className={styles.contactEmail}>contact@haitihomeofhope.org</a> and
+          we will be glad to help.
         </Typography>
       </Grid>
     </Grid>

@@ -22,7 +22,7 @@ export default function Mission() {
           </Typography>
           <br />
           <Typography variant="body1" className={styles.missionStatement}>
-            The mission of Haiti Home of Hope, Inc. is to provide spiritual,
+            The mission of Haiti Home of Hope Inc. is to provide spiritual,
             physical, and emotional well-being for those most in need, through
             sharing the gospel, community outreach, orphan prevention, and
             orphan care. <br /> <br />

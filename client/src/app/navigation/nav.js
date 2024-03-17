@@ -18,6 +18,7 @@ const pages = [
   { name: "Who We Are", link: "/about" },
   { name: "What We Do", link: "/ministries" },
   { name: "Give", link: "/give" },
+  { name: "Contact", link: "/contact" },
 ];
 
 export default function NavBar() {
@@ -41,16 +42,6 @@ export default function NavBar() {
     }
   };
 
-  const [open, setOpen] = useState(false);
-
-  const handleClickOpen = () => {
-    setOpen(true);
-  };
-
-  const handleClose = (value) => {
-    setOpen(false);
-    setSelectedValue(value);
-  };
   useEffect(() => {
     window.addEventListener("scroll", changeNavbarColor);
   });

@@ -59,7 +59,7 @@ export default function BottomNav() {
             color: "grey",
           }}
         >
-          © COPYRIGHT 2020 HAITI HOME OF HOPE INC.
+          © COPYRIGHT 2024 HAITI HOME OF HOPE INC.
         </Typography>
       </div>
     </Box>
