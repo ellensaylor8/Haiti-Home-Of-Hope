@@ -72,7 +72,7 @@ export default async function DonationForm() {
         <br />
         <br />
         <Typography>
-          Questions or need to edit/cancel a subscription? Reach out to{" "}
+          Questions or need to edit/cancel a recurring payment? Reach out to{" "}
           <a className={styles.contactEmail}>contact@haitihomeofhope.org</a> and
           we will be glad to help.
         </Typography>

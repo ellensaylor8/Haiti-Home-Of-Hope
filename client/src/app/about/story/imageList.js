@@ -97,7 +97,7 @@ const itemData = [
     title: "Lavi",
   },
   {
-    img: "/images/ministry/Fricot.jpg",
-    title: "Fricot 8 yrs old",
+    img: "/images/ministry/Fricot_2.jpg",
+    title: "Fricot",
   },
 ];
