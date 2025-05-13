@@ -7,7 +7,7 @@
 ### App is hosted via Firebase Hosting
   [Next.js integration with Firebase Hosting](https://firebase.google.com/docs/hosting/frameworks/nextjs#initialize_a_new_project)
   
-  [Haiti Home of Hope Firebase Project](https://console.firebase.google.com/u/0/project/haiti-home-of-hope/overview)
+  [Haiti Home of Hope Firebase Project](https://console.firebase.google.com/u/0/project/haiti-home-of-hope/overview) Ellen Saylor and Chris Brennan should each have access to Haiti Home of Hope Firebase project
 
   haitihomeofhope.org registrar is cPanel inmotion hosting. Chris Brennan and Ellen Saylor should each have access to the inmotion hosting account
 
