@@ -6,7 +6,7 @@
   
   [Haiti Home of Hope Firebase Project](https://console.firebase.google.com/u/0/project/haiti-home-of-hope/overview)
 
-  haitihomeofhope.org domain and AutoSSL are provided via cPanel inmotion hosting. Chris Brennan and Ellen Saylor should each have access to the cPanel account
+  haitihomeofhope.org registrar is cPanel inmotion hosting. Chris Brennan and Ellen Saylor should each have access to the inmotion hosting account
 
 
 ## Payment Processor
