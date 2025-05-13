@@ -1,5 +1,8 @@
 # Haiti-Home-Of-Hope
 
+## Web Framework
+[Next.js](https://nextjs.org/)
+
 ## Hosting
 ### App is hosted via Firebase Hosting
   [Next.js integration with Firebase Hosting](https://firebase.google.com/docs/hosting/frameworks/nextjs#initialize_a_new_project)
