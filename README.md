@@ -11,7 +11,7 @@ See [client README](https://github.com/ellensaylor8/Haiti-Home-Of-Hope/blob/main
   
   [Haiti Home of Hope Firebase Project](https://console.firebase.google.com/u/0/project/haiti-home-of-hope/overview) Ellen Saylor and Chris Brennan should each have access to Haiti Home of Hope Firebase project
 
-  haitihomeofhope.org registrar is cPanel inmotion hosting. Chris Brennan and Ellen Saylor should each have access to the inmotion hosting account
+  haitihomeofhope.org registrar is Network Solutions
 
 
 ## Payment Processor
