@@ -18,4 +18,4 @@ See [client README](https://github.com/ellensaylor8/Haiti-Home-Of-Hope/blob/main
 
    [Stripe](https://dashboard.stripe.com/login) Donna Barnett, Chris Brennan and Ellen Saylor should all have acces to HHH Stripe Account
 
-   [Strip Integraton for NextJs]()
+   [Stripe Developer Tools](https://docs.stripe.com/development)
